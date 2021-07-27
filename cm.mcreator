@@ -580,6 +580,15 @@
       "ids": {},
       "registry_name": "strong_bronze_armor_boots_recipe",
       "path": "~/Armor"
+    },
+    {
+      "name": "CmMCMOD",
+      "type": "tab",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cm_mcmod"
     }
   ],
   "variable_elements": [],
@@ -608,6 +617,7 @@
       "item.cm.tin_armor_leggings": "Tin Leggings",
       "block.cm.copper_ore_ore": "Copper ore",
       "item.cm.tin_armor_boots": "Tin Boots",
+      "itemGroup.tabcm_mcmod": "RLJR Items",
       "block.cm.tin_ore_block": "Block of Tin",
       "item.cm.aluminium_armor_helmet": "Aluminium Helmet",
       "item.cm.aluminium_armor_boots": "Aluminium Boots",
@@ -629,6 +639,10 @@
       },
       {
         "name": "Ore",
+        "children": []
+      },
+      {
+        "name": "Advancments",
         "children": []
       }
     ]

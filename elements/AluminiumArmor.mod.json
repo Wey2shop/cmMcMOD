@@ -11,7 +11,7 @@
     "enableBoots": true,
     "textureBoots": "aluminium_boots",
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:CmMCMOD"
     },
     "armorTextureFile": "aluminium",
     "helmetName": "Aluminium Helmet",

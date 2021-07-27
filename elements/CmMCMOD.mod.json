@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "RLJR Items",
+    "icon": {
+      "value": "CUSTOM:DiamondFireSword"
+    },
+    "showSearch": false
+  }
+}

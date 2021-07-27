@@ -8,7 +8,7 @@
     "name": "Diamond Fire Sword",
     "rarity": "EPIC",
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:CmMCMOD"
     },
     "stackSize": 1,
     "enchantability": 0,

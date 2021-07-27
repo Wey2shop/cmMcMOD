@@ -8,7 +8,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.World;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -18,6 +17,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.cm.procedures.DiamondFireSwordLivingEntityIsHitWithItemProcedure;
+import net.mcreator.cm.itemgroup.CmMCMODItemGroup;
 import net.mcreator.cm.CmModElements;
 
 import java.util.Map;
@@ -40,7 +40,7 @@ public class DiamondFireSwordItem extends CmModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxDamage(2).isImmuneToFire().rarity(Rarity.EPIC));
+			super(new Item.Properties().group(CmMCMODItemGroup.tab).maxDamage(2).isImmuneToFire().rarity(Rarity.EPIC));
 			setRegistryName("diamond_fire_sword");
 		}
 

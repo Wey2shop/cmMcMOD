@@ -8,7 +8,7 @@
     "name": "Bronze",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:CmMCMOD"
     },
     "stackSize": 64,
     "enchantability": 0,
