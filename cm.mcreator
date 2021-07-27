@@ -156,6 +156,16 @@
       "ids": {},
       "registry_name": "temple_spawn",
       "path": "~/Crafting"
+    },
+    {
+      "name": "Test",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test",
+      "path": "~/Crafting"
     }
   ],
   "variable_elements": [],
@@ -163,6 +173,7 @@
   "language_map": {
     "en_us": {
       "block.cm.fire_table": "Fire Table",
+      "item.cm.test": "Test",
       "item.cm.diamond_fire_sword": "Diamond Fire Sword"
     }
   },
