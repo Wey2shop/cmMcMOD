@@ -1,0 +1,36 @@
+{
+  "group": "cm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "cm:bronze"
+    },
+    "1": {
+      "item": "cm:bronze"
+    },
+    "2": {
+      "item": "cm:bronze"
+    },
+    "3": {
+      "item": "cm:bronze"
+    },
+    "5": {
+      "item": "cm:bronze"
+    },
+    "6": {
+      "item": "cm:bronze"
+    },
+    "8": {
+      "item": "cm:bronze"
+    }
+  },
+  "result": {
+    "item": "cm:strong_bronze_armor_leggings",
+    "count": 1
+  }
+}

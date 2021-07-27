@@ -1,0 +1,26 @@
+{
+  "group": "cm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "cm:bronze"
+    },
+    "2": {
+      "item": "cm:bronze"
+    },
+    "3": {
+      "item": "cm:bronze"
+    },
+    "5": {
+      "item": "cm:bronze"
+    }
+  },
+  "result": {
+    "item": "cm:strong_bronze_armor_boots",
+    "count": 1
+  }
+}

@@ -336,6 +336,250 @@
       "ids": {},
       "registry_name": "tin_ore_ore_smelting",
       "path": "~/Ore"
+    },
+    {
+      "name": "CopperArmor",
+      "type": "armor",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "CopperArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_armor_helmet_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "CopperArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_armor_body_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "CopperArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_armor_leggings_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "CopperArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_armor_boots_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "AluminiumArmor",
+      "type": "armor",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "AluminiumArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_armor_helmet_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "AluminiumArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_armor_body_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "AluminiumArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_armor_leggings_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "AluminiumArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_armor_boots_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "TinArmor",
+      "type": "armor",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "TinArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_armor_helmet_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "TinArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_armor_body_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "TinArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_armor_leggings_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "TinArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_armor_boots_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "Bronze",
+      "type": "item",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bronze",
+      "path": "~/Crafting"
+    },
+    {
+      "name": "Bronzerecipe",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bronzerecipe",
+      "path": "~/Crafting"
+    },
+    {
+      "name": "StrongBronzeArmor",
+      "type": "armor",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strong_bronze_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "StrongBronzeArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strong_bronze_armor_helmet_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "StrongBronzeArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strong_bronze_armor_body_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "StrongBronzeArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strong_bronze_armor_leggings_recipe",
+      "path": "~/Armor"
+    },
+    {
+      "name": "StrongBronzeArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "strong_bronze_armor_boots_recipe",
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [],
@@ -343,16 +587,33 @@
   "language_map": {
     "en_us": {
       "block.cm.fire_table": "Fire Table",
+      "item.cm.copper_armor_helmet": "Copper Helmet",
+      "item.cm.strong_bronze_armor_chestplate": "Bronze Chestplate",
+      "item.cm.strong_bronze_armor_helmet": "Bronze Helmet",
+      "item.cm.tin_ore_ingot": "Tin Ingot",
+      "item.cm.copper_armor_leggings": "Copper Leggings",
+      "item.cm.strong_bronze_armor_boots": "Bronze Boots",
+      "item.cm.diamond_fire_sword": "Diamond Fire Sword",
+      "block.cm.aluminium_ore_block": "Block of Aluminium",
+      "block.cm.copper_ore_block": "Block of Copper",
+      "item.cm.copper_armor_chestplate": "Copper Chestplate",
+      "item.cm.tin_armor_chestplate": "Tin Chestplate",
+      "item.cm.tin_armor_helmet": "Tin Helmet",
       "item.cm.aluminium_ore_ingot": "Aluminium Ingot",
       "block.cm.aluminium_ore_ore": "Aluminium Ore",
-      "block.cm.tin_ore_block": "Block of Tin",
-      "block.cm.copper_ore_block": "Block of Copper",
-      "item.cm.tin_ore_ingot": "Tin Ingot",
-      "item.cm.diamond_fire_sword": "Diamond Fire Sword",
+      "item.cm.aluminium_armor_leggings": "Aluminium Leggings",
+      "item.cm.aluminium_armor_chestplate": "Aluminium Chestplate",
+      "item.cm.bronze": "Bronze",
       "block.cm.tin_ore_ore": "Tin Ore",
-      "block.cm.aluminium_ore_block": "Block of Aluminium",
+      "item.cm.tin_armor_leggings": "Tin Leggings",
+      "block.cm.copper_ore_ore": "Copper ore",
+      "item.cm.tin_armor_boots": "Tin Boots",
+      "block.cm.tin_ore_block": "Block of Tin",
+      "item.cm.aluminium_armor_helmet": "Aluminium Helmet",
+      "item.cm.aluminium_armor_boots": "Aluminium Boots",
+      "item.cm.strong_bronze_armor_leggings": "Bronze Leggings",
       "item.cm.copper_ore_ingot": "Copper Ingot",
-      "block.cm.copper_ore_ore": "Copper ore"
+      "item.cm.copper_armor_boots": "Copper Boots"
     }
   },
   "foldersRoot": {

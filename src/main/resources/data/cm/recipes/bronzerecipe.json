@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "cm:copper_ore_ingot"
+  },
+  "addition": {
+    "item": "cm:tin_ore_ingot"
+  },
+  "result": {
+    "item": "cm:bronze"
+  }
+}

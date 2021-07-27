@@ -1,0 +1,29 @@
+{
+  "group": "cm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "cm:aluminium_ore_ingot"
+    },
+    "1": {
+      "item": "cm:aluminium_ore_ingot"
+    },
+    "2": {
+      "item": "cm:aluminium_ore_ingot"
+    },
+    "3": {
+      "item": "cm:aluminium_ore_ingot"
+    },
+    "5": {
+      "item": "cm:aluminium_ore_ingot"
+    }
+  },
+  "result": {
+    "item": "cm:aluminium_armor_helmet",
+    "count": 1
+  }
+}
