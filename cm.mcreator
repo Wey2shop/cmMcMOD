@@ -179,8 +179,8 @@
     "modid": "cm",
     "modName": "ChickenMOD",
     "version": "1.0.0",
-    "author": "Robert, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "author": "RLJR",
+    "websiteURL": "https://github.com/Wey2shop/cmMcMOD",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
@@ -189,6 +189,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.5",
+    "credits": "RLJR - CmMcMOD",
     "modElementsPackage": "net.mcreator.cm",
     "lockBaseModFiles": false
   },

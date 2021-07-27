@@ -6,9 +6,9 @@ license="Academic Free License v3.0"
 modId="cm"
 version="1.0.0"
 displayName="ChickenMOD"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="Robert, MCreator"
+credits="RLJR - CmMcMOD"
+displayURL="https://github.com/Wey2shop/cmMcMOD"
+authors="RLJR"
 
 [[dependencies.cm]]
     modId="minecraft"
