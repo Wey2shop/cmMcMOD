@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Copper_Ore Ore",
+    "name": "Copper ore",
     "specialInfo": [],
     "hardness": 3.0,
     "resistance": 5.0,
@@ -43,7 +43,7 @@
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:Copper_OreIngot"
+      "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,

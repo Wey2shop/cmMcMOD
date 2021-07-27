@@ -35,7 +35,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.cm.item.Copper_OreIngotItem;
 import net.mcreator.cm.CmModElements;
 
 import java.util.Random;
@@ -70,7 +69,7 @@ public class Copper_OreOreBlock extends CmModElements.ModElement {
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(Copper_OreIngotItem.block, (int) (1)));
+			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
 	private static Feature<OreFeatureConfig> feature = null;
