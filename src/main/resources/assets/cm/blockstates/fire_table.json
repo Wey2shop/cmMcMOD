@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "cm:block/fire_table"
+    },
+    "facing=north": {
+      "model": "cm:block/fire_table"
+    },
+    "facing=east": {
+      "model": "cm:block/fire_table",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "cm:block/fire_table",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "cm:block/fire_table",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "cm:block/fire_table",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

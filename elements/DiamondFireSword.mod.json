@@ -1,0 +1,36 @@
+{
+  "_fv": 18,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "fireswordanimation",
+    "customModelName": "Tool",
+    "name": "Diamond Fire Sword",
+    "rarity": "EPIC",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 2,
+    "toolType": 2.0,
+    "damageCount": 2,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": true,
+    "damageVsEntity": 100.0,
+    "specialInfo": [],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 1,
+    "onEntityHitWith": {
+      "name": "DiamondFireSwordLivingEntityIsHitWithItem"
+    }
+  }
+}

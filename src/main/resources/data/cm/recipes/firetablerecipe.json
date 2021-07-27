@@ -1,0 +1,42 @@
+{
+  "group": "cm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "1": {
+      "item": "minecraft:campfire"
+    },
+    "2": {
+      "item": "minecraft:flint_and_steel"
+    },
+    "3": {
+      "item": "minecraft:magma_block"
+    },
+    "4": {
+      "item": "minecraft:scaffolding"
+    },
+    "5": {
+      "item": "minecraft:magma_block"
+    },
+    "6": {
+      "item": "minecraft:lava_bucket"
+    },
+    "7": {
+      "tag": "minecraft:slabs"
+    },
+    "8": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "cm:fire_table",
+    "count": 1
+  }
+}
