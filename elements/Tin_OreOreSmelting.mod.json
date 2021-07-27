@@ -3,18 +3,18 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Smelting",
-    "xpReward": 1.7,
+    "xpReward": 1.7000000000000002,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": false,
     "smeltingInputStack": {
-      "value": "CUSTOM:Aluminium_OreOre"
+      "value": "CUSTOM:Tin_OreOre"
     },
     "smeltingReturnStack": {
-      "value": "CUSTOM:Aluminium_OreIngot"
+      "value": "CUSTOM:Tin_OreIngot"
     },
-    "name": "aluminium_ore_ore_smelting",
+    "name": "tin_ore_ore_smelting",
     "namespace": "mod"
   }
 }

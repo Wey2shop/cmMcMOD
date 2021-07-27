@@ -1,7 +1,7 @@
 {
   "group": "cm",
   "type": "minecraft:smelting",
-  "experience": 0.7,
+  "experience": 1.7,
   "cookingtime": 200,
   "ingredient": {
     "item": "cm:copper_ore_ore"

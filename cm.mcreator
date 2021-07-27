@@ -276,6 +276,66 @@
       "ids": {},
       "registry_name": "aluminium_ore_ore_smelting",
       "path": "~/Ore"
+    },
+    {
+      "name": "Tin_OreIngot",
+      "type": "item",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_ore_ingot",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Tin_OreOre",
+      "type": "block",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_ore_ore",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Tin_OreBlock",
+      "type": "block",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_ore_block",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Tin_OreOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_ore_ore_block_recipe",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Tin_OreBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_ore_block_ore_recipe",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Tin_OreOreSmelting",
+      "type": "recipe",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tin_ore_ore_smelting",
+      "path": "~/Ore"
     }
   ],
   "variable_elements": [],
@@ -285,8 +345,11 @@
       "block.cm.fire_table": "Fire Table",
       "item.cm.aluminium_ore_ingot": "Aluminium Ingot",
       "block.cm.aluminium_ore_ore": "Aluminium Ore",
+      "block.cm.tin_ore_block": "Block of Tin",
       "block.cm.copper_ore_block": "Block of Copper",
+      "item.cm.tin_ore_ingot": "Tin Ingot",
       "item.cm.diamond_fire_sword": "Diamond Fire Sword",
+      "block.cm.tin_ore_ore": "Tin Ore",
       "block.cm.aluminium_ore_block": "Block of Aluminium",
       "item.cm.copper_ore_ingot": "Copper Ingot",
       "block.cm.copper_ore_ore": "Copper ore"

@@ -1,0 +1,13 @@
+{
+  "group": "cm",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cm:tin_ore_block"
+    }
+  ],
+  "result": {
+    "item": "cm:tin_ore_ingot",
+    "count": 9
+  }
+}

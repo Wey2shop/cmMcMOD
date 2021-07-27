@@ -1,12 +1,12 @@
 {
   "group": "cm",
   "type": "minecraft:smelting",
-  "experience": 1.7,
+  "experience": 1.7000000000000002,
   "cookingtime": 200,
   "ingredient": {
-    "item": "cm:aluminium_ore_ore"
+    "item": "cm:tin_ore_ore"
   },
   "result": {
-    "item": "cm:aluminium_ore_ingot"
+    "item": "cm:tin_ore_ingot"
   }
 }
