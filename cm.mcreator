@@ -216,6 +216,66 @@
       "ids": {},
       "registry_name": "copper_ore_ore_smelting",
       "path": "~/Ore"
+    },
+    {
+      "name": "Aluminium_OreIngot",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_ore_ingot",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Aluminium_OreOre",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_ore_ore",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Aluminium_OreBlock",
+      "type": "block",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_ore_block",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Aluminium_OreOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_ore_ore_block_recipe",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Aluminium_OreBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_ore_block_ore_recipe",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Aluminium_OreOreSmelting",
+      "type": "recipe",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "aluminium_ore_ore_smelting",
+      "path": "~/Ore"
     }
   ],
   "variable_elements": [],
@@ -223,9 +283,12 @@
   "language_map": {
     "en_us": {
       "block.cm.fire_table": "Fire Table",
-      "block.cm.copper_ore_block": "Block of Copper_Ore",
+      "item.cm.aluminium_ore_ingot": "Aluminium Ingot",
+      "block.cm.aluminium_ore_ore": "Aluminium Ore",
+      "block.cm.copper_ore_block": "Block of Copper",
       "item.cm.diamond_fire_sword": "Diamond Fire Sword",
-      "item.cm.copper_ore_ingot": "Copper_Ore",
+      "block.cm.aluminium_ore_block": "Block of Aluminium",
+      "item.cm.copper_ore_ingot": "Copper Ingot",
       "block.cm.copper_ore_ore": "Copper ore"
     }
   },

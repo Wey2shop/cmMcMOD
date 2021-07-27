@@ -1,7 +1,10 @@
 {
   "block.cm.fire_table": "Fire Table",
-  "block.cm.copper_ore_block": "Block of Copper_Ore",
+  "item.cm.aluminium_ore_ingot": "Aluminium Ingot",
+  "block.cm.aluminium_ore_ore": "Aluminium Ore",
+  "block.cm.copper_ore_block": "Block of Copper",
   "item.cm.diamond_fire_sword": "Diamond Fire Sword",
-  "item.cm.copper_ore_ingot": "Copper_Ore",
+  "block.cm.aluminium_ore_block": "Block of Aluminium",
+  "item.cm.copper_ore_ingot": "Copper Ingot",
   "block.cm.copper_ore_ore": "Copper ore"
 }

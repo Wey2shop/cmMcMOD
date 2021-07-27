@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cm:blocks/aluminium_ore_ore_block",
+    "particle": "cm:blocks/aluminium_ore_ore_block"
+  }
+}

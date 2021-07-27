@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "copper_ore_ore_block",
+    "texture": "aluminium_ore_ore_block",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Block of Copper",
+    "name": "Block of Aluminium",
     "specialInfo": [],
     "hardness": 5.0,
     "resistance": 10.0,

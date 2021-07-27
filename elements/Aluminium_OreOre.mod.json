@@ -2,7 +2,7 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "copper_ore_ore_block",
+    "texture": "aluminium_ore_ore",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -32,10 +32,10 @@
         "subtract": false
       }
     ],
-    "name": "Block of Copper",
+    "name": "Aluminium Ore",
     "specialInfo": [],
-    "hardness": 5.0,
-    "resistance": 10.0,
+    "hardness": 3.0,
+    "resistance": 5.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -52,7 +52,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "IRON"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -72,7 +72,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "STONE"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -101,16 +101,18 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "spawnWorldTypes": [
+      "Surface"
+    ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
       }
     ],
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "frequencyPerChunks": 3,
+    "frequencyOnChunk": 7,
+    "minGenerateHeight": 1,
+    "maxGenerateHeight": 30
   }
 }

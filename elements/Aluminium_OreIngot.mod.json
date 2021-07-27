@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "copper_ore_ingot",
+    "texture": "aluminium_ore_ingot",
     "customModelName": "Normal",
-    "name": "Copper Ingot",
+    "name": "Aluminium Ingot",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "MISC"

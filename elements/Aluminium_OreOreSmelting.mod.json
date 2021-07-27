@@ -9,12 +9,12 @@
     "group": "",
     "recipeShapeless": false,
     "smeltingInputStack": {
-      "value": "CUSTOM:Copper_OreOre"
+      "value": "CUSTOM:Aluminium_OreOre"
     },
     "smeltingReturnStack": {
-      "value": "CUSTOM:Copper_OreIngot"
+      "value": "CUSTOM:Aluminium_OreIngot"
     },
-    "name": "copper_ore_ore_smelting",
+    "name": "aluminium_ore_ore_smelting",
     "namespace": "mod"
   }
 }
