@@ -156,6 +156,66 @@
       "ids": {},
       "registry_name": "temple_spawn",
       "path": "~/Crafting"
+    },
+    {
+      "name": "Copper_OreIngot",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore_ingot",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Copper_OreOre",
+      "type": "block",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore_ore",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Copper_OreBlock",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore_block",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Copper_OreOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore_ore_block_recipe",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Copper_OreBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore_block_ore_recipe",
+      "path": "~/Ore"
+    },
+    {
+      "name": "Copper_OreOreSmelting",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore_ore_smelting",
+      "path": "~/Ore"
     }
   ],
   "variable_elements": [],
@@ -163,7 +223,10 @@
   "language_map": {
     "en_us": {
       "block.cm.fire_table": "Fire Table",
-      "item.cm.diamond_fire_sword": "Diamond Fire Sword"
+      "block.cm.copper_ore_block": "Block of Copper_Ore",
+      "item.cm.diamond_fire_sword": "Diamond Fire Sword",
+      "item.cm.copper_ore_ingot": "Copper_Ore",
+      "block.cm.copper_ore_ore": "Copper_Ore Ore"
     }
   },
   "foldersRoot": {
@@ -171,6 +234,14 @@
     "children": [
       {
         "name": "Crafting",
+        "children": []
+      },
+      {
+        "name": "Armor",
+        "children": []
+      },
+      {
+        "name": "Ore",
         "children": []
       }
     ]
