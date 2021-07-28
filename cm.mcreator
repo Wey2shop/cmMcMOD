@@ -685,6 +685,15 @@
         ]
       },
       "path": "~/HomeCMD"
+    },
+    {
+      "name": "Crusher",
+      "type": "block",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crusher"
     }
   ],
   "variable_elements": [
@@ -733,6 +742,7 @@
       "block.cm.aluminium_ore_ore": "Aluminium Ore",
       "item.cm.aluminium_armor_leggings": "Aluminium Leggings",
       "item.cm.aluminium_armor_chestplate": "Aluminium Chestplate",
+      "block.cm.crusher": "Crusher",
       "item.cm.bronze": "Bronze",
       "block.cm.tin_ore_ore": "Tin Ore",
       "item.cm.tin_armor_leggings": "Tin Leggings",

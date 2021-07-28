@@ -1,0 +1,576 @@
+{
+  "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+  "display": {
+    "gui": {
+      "rotation": [
+        21,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        315,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        315,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    }
+  },
+  "elements": [
+    {
+      "name": "Cube",
+      "from": [
+        2,
+        0,
+        1
+      ],
+      "to": [
+        14,
+        1,
+        15
+      ],
+      "faces": {
+        "east": {
+          "texture": "#grasstop",
+          "uv": [
+            1,
+            0,
+            15,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            14,
+            1
+          ]
+        },
+        "up": {
+          "texture": "#FireTable",
+          "uv": [
+            0,
+            8,
+            8,
+            22
+          ]
+        },
+        "down": {
+          "texture": "#grasstop",
+          "uv": [
+            4,
+            0,
+            16,
+            14
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        2,
+        16,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            2,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            1,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            2,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            1,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            2,
+            1
+          ]
+        },
+        "down": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            2,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [
+        14,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            2,
+            16
+          ]
+        },
+        "east": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            1,
+            16
+          ]
+        },
+        "south": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            2,
+            16
+          ]
+        },
+        "west": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            1,
+            16
+          ]
+        },
+        "up": {
+          "texture": "#grasstop",
+          "uv": [
+            3,
+            3,
+            5,
+            4
+          ]
+        },
+        "down": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            2,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [
+        2,
+        0,
+        0
+      ],
+      "to": [
+        14,
+        6,
+        1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            6
+          ]
+        },
+        "south": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            6
+          ]
+        },
+        "down": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [
+        5,
+        1,
+        5
+      ],
+      "to": [
+        11,
+        6,
+        11
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#FireTable",
+          "uv": [
+            -8,
+            2,
+            -2,
+            7
+          ]
+        },
+        "east": {
+          "texture": "#FireTable",
+          "uv": [
+            16,
+            -5,
+            16,
+            0
+          ]
+        },
+        "south": {
+          "texture": "#FireTable",
+          "uv": [
+            9,
+            -4,
+            15,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#FireTable",
+          "uv": [
+            0,
+            -8,
+            6,
+            -3
+          ]
+        },
+        "up": {
+          "texture": "#FireTable",
+          "uv": [
+            0,
+            10,
+            6,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#FireTable",
+          "uv": [
+            0,
+            4,
+            6,
+            10
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [
+        2,
+        6,
+        0
+      ],
+      "to": [
+        14,
+        7,
+        14
+      ],
+      "faces": {
+        "north": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            1
+          ]
+        },
+        "east": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            14,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            14,
+            1
+          ]
+        },
+        "up": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            14
+          ],
+          "rotation": 270
+        },
+        "down": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            14
+          ]
+        }
+      }
+    },
+    {
+      "name": "Cube",
+      "from": [
+        2,
+        4,
+        -8
+      ],
+      "to": [
+        14,
+        5,
+        6
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": 45.0,
+        "rescale": true
+      },
+      "faces": {
+        "north": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            1
+          ]
+        },
+        "east": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            14,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            14,
+            1
+          ]
+        },
+        "up": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            14
+          ]
+        },
+        "down": {
+          "texture": "#grasstop",
+          "uv": [
+            0,
+            0,
+            12,
+            14
+          ]
+        }
+      }
+    }
+  ]
+}
