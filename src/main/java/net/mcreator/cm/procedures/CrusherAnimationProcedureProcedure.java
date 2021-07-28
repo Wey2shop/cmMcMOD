@@ -18,7 +18,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.cm.gui.FireBTableGUIGui;
+import net.mcreator.cm.gui.CrusherGUInewGui;
 import net.mcreator.cm.block.CrusherBlock;
 import net.mcreator.cm.block.Crusher2OPENBlock;
 import net.mcreator.cm.CmModVariables;
@@ -157,12 +157,12 @@ public class CrusherAnimationProcedureProcedure extends CmModElements.ModElement
 					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
 						@Override
 						public ITextComponent getDisplayName() {
-							return new StringTextComponent("FireBTableGUI");
+							return new StringTextComponent("CrusherGUInew");
 						}
 
 						@Override
 						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-							return new FireBTableGUIGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new CrusherGUInewGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

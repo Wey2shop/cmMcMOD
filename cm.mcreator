@@ -774,6 +774,76 @@
           }
         ]
       }
+    },
+    {
+      "name": "Crushergui",
+      "type": "gui",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crushergui"
+    },
+    {
+      "name": "CrusherGUInew",
+      "type": "gui",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crusher_gu_inew"
+    },
+    {
+      "name": "CrushitemAnimation",
+      "type": "item",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crushitem_animation"
+    },
+    {
+      "name": "UpdateCrusher",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "update_crusher",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Slot1ChangeCrusher",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slot_1_change_crusher",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrushBlockAnimation",
+      "type": "block",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crush_block_animation"
     }
   ],
   "variable_elements": [
@@ -834,6 +904,8 @@
       "item.cm.bronze": "Bronze",
       "block.cm.tin_ore_ore": "Tin Ore",
       "item.cm.tin_armor_leggings": "Tin Leggings",
+      "item.cm.crushitem_animation": "Crushing",
+      "block.cm.crush_block_animation": "Crush Block Animation",
       "block.cm.copper_ore_ore": "Copper ore",
       "item.cm.tin_armor_boots": "Tin Boots",
       "itemGroup.tabcm_mcmod": "RLJR Items",

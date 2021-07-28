@@ -1,0 +1,90 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 177,
+    "height": 125,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": -37,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Crusher",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Crusher",
+          "x": 132,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Crush",
+          "onClick": {
+            "name": "UpdateCrusher"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "Crush",
+          "x": 188,
+          "y": 159
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:CrushitemAnimation"
+          },
+          "id": 0,
+          "disableStackInteraction": true,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #0",
+          "x": 204,
+          "y": 64
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Slot1ChangeCrusher"
+          },
+          "name": "Slot #1",
+          "x": 222,
+          "y": 64
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.DIAMOND_SWORD"
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "Slot1ChangeCrusher"
+          },
+          "name": "Slot #2",
+          "x": 186,
+          "y": 64
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "FireBTableGUIThisGUIIsOpened"
+    }
+  }
+}
