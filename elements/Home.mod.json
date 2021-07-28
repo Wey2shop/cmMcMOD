@@ -3,6 +3,9 @@
   "_type": "command",
   "definition": {
     "commandName": "home",
-    "permissionLevel": "No requirement"
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "HomeProcedure"
+    }
   }
 }

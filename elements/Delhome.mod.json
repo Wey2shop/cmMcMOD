@@ -3,6 +3,9 @@
   "_type": "command",
   "definition": {
     "commandName": "delhome",
-    "permissionLevel": "No requirement"
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "DelhomeProcedure"
+    }
   }
 }

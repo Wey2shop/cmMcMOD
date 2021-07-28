@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "crusher:default",
+    "customModelName": "crusher2:default",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Crusher",
+    "name": "Crusher 2 OPEN",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -43,7 +43,7 @@
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Crusher"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -72,7 +72,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "GROUND"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -103,9 +103,6 @@
     "fluidRestrictions": [],
     "onRightClicked": {
       "name": "CrusherAnimationProcedure"
-    },
-    "onTickUpdate": {
-      "name": "CrusherONprocedure"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

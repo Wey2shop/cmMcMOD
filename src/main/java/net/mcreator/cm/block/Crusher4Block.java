@@ -9,16 +9,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
@@ -27,7 +22,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.cm.procedures.CrusherONprocedureProcedure;
-import net.mcreator.cm.procedures.CrusherAnimationProcedureProcedure;
 import net.mcreator.cm.itemgroup.CmMCMODItemGroup;
 import net.mcreator.cm.CmModElements;
 
@@ -38,11 +32,11 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @CmModElements.ModElement.Tag
-public class CrusherBlock extends CmModElements.ModElement {
-	@ObjectHolder("cm:crusher")
+public class Crusher4Block extends CmModElements.ModElement {
+	@ObjectHolder("cm:crusher_4")
 	public static final Block block = null;
-	public CrusherBlock(CmModElements instance) {
-		super(instance, 57);
+	public Crusher4Block(CmModElements instance) {
+		super(instance, 58);
 	}
 
 	@Override
@@ -60,7 +54,7 @@ public class CrusherBlock extends CmModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.METAL).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false));
-			setRegistryName("crusher");
+			setRegistryName("crusher_4");
 		}
 
 		@Override
@@ -100,25 +94,6 @@ public class CrusherBlock extends CmModElements.ModElement {
 				CrusherONprocedureProcedure.executeProcedure($_dependencies);
 			}
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
-		}
-
-		@Override
-		public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand,
-				BlockRayTraceResult hit) {
-			super.onBlockActivated(state, world, pos, entity, hand, hit);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			Direction direction = hit.getFace();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				CrusherAnimationProcedureProcedure.executeProcedure($_dependencies);
-			}
-			return ActionResultType.SUCCESS;
 		}
 	}
 }

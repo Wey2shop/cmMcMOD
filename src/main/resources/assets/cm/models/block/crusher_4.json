@@ -1,0 +1,11 @@
+{
+  "parent": "cm:custom/crusher4",
+  "textures": {
+    "all": "cm:blocks/log_oak",
+    "particle": "cm:blocks/log_oak",
+    "0": "cm:blocks/log_oak",
+    "1": "cm:blocks/cauldron_inner",
+    "2": "cm:blocks/cauldron_side",
+    "3": "cm:blocks/stone"
+  }
+}

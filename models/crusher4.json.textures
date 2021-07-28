@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "log_oak",
+        "1": "cauldron_inner",
+        "2": "cauldron_side",
+        "3": "stone"
+      },
+      "name": "default"
+    }
+  }
+}
