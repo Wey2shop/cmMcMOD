@@ -1,0 +1,8 @@
+{
+  "_fv": 18,
+  "_type": "command",
+  "definition": {
+    "commandName": "delhome",
+    "permissionLevel": "No requirement"
+  }
+}

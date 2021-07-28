@@ -589,9 +589,130 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cm_mcmod"
+    },
+    {
+      "name": "Home",
+      "type": "command",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "home",
+      "path": "~/HomeCMD"
+    },
+    {
+      "name": "Sethome",
+      "type": "command",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sethome",
+      "path": "~/HomeCMD"
+    },
+    {
+      "name": "Delhome",
+      "type": "command",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "delhome",
+      "path": "~/HomeCMD"
+    },
+    {
+      "name": "DelhomeProcedure",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "delhome_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/HomeCMD"
+    },
+    {
+      "name": "HomeProcedure",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "home_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/HomeCMD"
+    },
+    {
+      "name": "SethomeProcedure",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sethome_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/HomeCMD"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "home_z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "home_x",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "home_y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "has_home",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
@@ -643,6 +764,10 @@
       },
       {
         "name": "Advancments",
+        "children": []
+      },
+      {
+        "name": "HomeCMD",
         "children": []
       }
     ]
