@@ -104,9 +104,6 @@
     "onRightClicked": {
       "name": "CrusherAnimationProcedure"
     },
-    "onTickUpdate": {
-      "name": "CrusherONprocedure"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

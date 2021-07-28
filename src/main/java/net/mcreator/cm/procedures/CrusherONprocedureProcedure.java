@@ -82,6 +82,6 @@ public class CrusherONprocedureProcedure extends CmModElements.ModElement {
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 20);
+		}.start(world, (int) 15);
 	}
 }
