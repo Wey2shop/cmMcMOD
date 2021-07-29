@@ -158,7 +158,7 @@ public class Slot1ChangeCrusherProcedure extends CmModElements.ModElement {
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, (int) 30);
+			}.start(world, (int) 20);
 		} else if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
@@ -250,7 +250,99 @@ public class Slot1ChangeCrusherProcedure extends CmModElements.ModElement {
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, (int) 30);
+			}.start(world, (int) 20);
+		} else if ((((new Object() {
+			public ItemStack getItemStack(int sltid) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) _ent).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							return ((Slot) ((Map) invobj).get(sltid)).getStack();
+						}
+					}
+				}
+				return ItemStack.EMPTY;
+			}
+		}.getItemStack((int) (2))).getItem() == new ItemStack(Blocks.GRAVEL, (int) (1)).getItem()) && ((new Object() {
+			public ItemStack getItemStack(int sltid) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) _ent).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							return ((Slot) ((Map) invobj).get(sltid)).getStack();
+						}
+					}
+				}
+				return ItemStack.EMPTY;
+			}
+		}.getItemStack((int) (0))).getItem() == new ItemStack(CrushitemAnimationItem.block, (int) (1)).getItem()))) {
+			new Object() {
+				private int ticks = 0;
+				private float waitTicks;
+				private IWorld world;
+				public void start(IWorld world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
+					this.world = world;
+				}
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(Blocks.SAND, (int) (1));
+								_setstack.setCount((int) 1);
+								((Slot) ((Map) invobj).get((int) (1))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+					if (entity instanceof PlayerEntity)
+						((PlayerEntity) entity).addExperienceLevel(-((int) 5));
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							Container _current = ((ServerPlayerEntity) _ent).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									((Slot) ((Map) invobj).get((int) (2))).decrStackSize((int) (1));
+									_current.detectAndSendChanges();
+								}
+							}
+						}
+					}
+					{
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							Container _current = ((ServerPlayerEntity) _ent).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
+									_current.detectAndSendChanges();
+								}
+							}
+						}
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
+				}
+			}.start(world, (int) 20);
 		}
 	}
 
