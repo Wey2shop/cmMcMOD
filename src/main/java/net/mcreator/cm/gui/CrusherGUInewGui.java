@@ -18,7 +18,6 @@ import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.ContainerType;
@@ -29,7 +28,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.mcreator.cm.procedures.UpdateCrusherProcedure;
 import net.mcreator.cm.procedures.Slot1ChangeCrusherProcedure;
 import net.mcreator.cm.procedures.FireBTableGUIThisGUIIsOpenedProcedure;
 import net.mcreator.cm.CmModElements;
@@ -117,7 +115,7 @@ public class CrusherGUInewGui extends CmModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 80, 7) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 80, 6) {
 				@Override
 				public boolean canTakeStack(PlayerEntity player) {
 					return false;
@@ -128,7 +126,7 @@ public class CrusherGUInewGui extends CmModElements.ModElement {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 98, 7) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 98, 6) {
 				@Override
 				public void onSlotChanged() {
 					super.onSlotChanged();
@@ -140,25 +138,20 @@ public class CrusherGUInewGui extends CmModElements.ModElement {
 					return false;
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 62, 7) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 62, 6) {
 				@Override
 				public void onSlotChanged() {
 					super.onSlotChanged();
 					GuiContainerMod.this.slotChanged(2, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(Items.DIAMOND_SWORD, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, -57 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 1 + 8 + sj * 18, -59 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, -57 + 142));
+				this.addSlot(new Slot(inv, si, 1 + 8 + si * 18, -59 + 142));
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
@@ -411,13 +404,6 @@ public class CrusherGUInewGui extends CmModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				UpdateCrusherProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {
@@ -429,6 +415,7 @@ public class CrusherGUInewGui extends CmModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				Slot1ChangeCrusherProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -436,6 +423,7 @@ public class CrusherGUInewGui extends CmModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				Slot1ChangeCrusherProcedure.executeProcedure($_dependencies);
 			}
 		}

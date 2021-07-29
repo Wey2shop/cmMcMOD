@@ -5,16 +5,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
-
-import net.mcreator.cm.CmMod;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
@@ -31,8 +27,8 @@ public class CrusherGUInewGuiWindow extends ContainerScreen<CrusherGUInewGui.Gui
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 177;
-		this.ySize = 125;
+		this.xSize = 178;
+		this.ySize = 123;
 	}
 	private static final ResourceLocation texture = new ResourceLocation("cm:textures/crusher_gu_inew.png");
 	@Override
@@ -70,7 +66,7 @@ public class CrusherGUInewGuiWindow extends ContainerScreen<CrusherGUInewGui.Gui
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Crusher", 7, -13, -12829636);
+		this.font.drawString(ms, "Crusher", 68, 103, -12829636);
 	}
 
 	@Override
@@ -83,11 +79,5 @@ public class CrusherGUInewGuiWindow extends ContainerScreen<CrusherGUInewGui.Gui
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 63, this.guiTop + 101, 50, 20, new StringTextComponent("Crush"), e -> {
-			if (true) {
-				CmMod.PACKET_HANDLER.sendToServer(new CrusherGUInewGui.ButtonPressedMessage(0, x, y, z));
-				CrusherGUInewGui.handleButtonAction(entity, 0, x, y, z);
-			}
-		}));
 	}
 }

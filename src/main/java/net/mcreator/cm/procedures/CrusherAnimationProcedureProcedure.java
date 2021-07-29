@@ -106,6 +106,8 @@ public class CrusherAnimationProcedureProcedure extends CmModElements.ModElement
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("powering down the crusher.."), (false));
 			}
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).closeScreen();
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Crusher2OPENBlock.block.getDefaultState()
 				.getBlock())) {
 			{
