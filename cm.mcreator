@@ -825,6 +825,100 @@
           }
         ]
       }
+    },
+    {
+      "name": "MachineBase",
+      "type": "block",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_base",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "MachinePress",
+      "type": "block",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_press",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "MachinePressLID",
+      "type": "block",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_press_lid",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "MachinePressAnimation1",
+      "type": "block",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_press_animation_1",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "MachinePressAnimation2",
+      "type": "block",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_press_animation_2",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "MachinePressAnimation3",
+      "type": "block",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_press_animation_3",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "MachineBlockAnimationSCRIPT",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_block_animation_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/cmEnergySystem/Machineblocks"
     }
   ],
   "variable_elements": [
@@ -874,8 +968,11 @@
       "block.cm.copper_ore_block": "Block of Copper",
       "item.cm.copper_armor_chestplate": "Copper Chestplate",
       "item.cm.tin_armor_chestplate": "Tin Chestplate",
+      "block.cm.machine_press_animation_1": "Machine Press Animation 1",
       "item.cm.tin_armor_helmet": "Tin Helmet",
+      "block.cm.machine_press_lid": "Machine Press LID",
       "block.cm.crusher_2_open": "Crusher 2 OPEN",
+      "block.cm.machine_base": "Machine Base",
       "block.cm.crusher_4": "Crusher",
       "item.cm.aluminium_ore_ingot": "Aluminium Ingot",
       "block.cm.aluminium_ore_ore": "Aluminium Ore",
@@ -885,11 +982,14 @@
       "item.cm.bronze": "Bronze",
       "block.cm.tin_ore_ore": "Tin Ore",
       "item.cm.tin_armor_leggings": "Tin Leggings",
+      "block.cm.machine_press_animation_2": "Machine Press Animation 2",
+      "block.cm.machine_press_animation_3": "Machine Press Animation 3",
       "item.cm.crushitem_animation": "Crushing",
       "block.cm.copper_ore_ore": "Copper ore",
       "item.cm.tin_armor_boots": "Tin Boots",
       "itemGroup.tabcm_mcmod": "RLJR Items",
       "block.cm.tin_ore_block": "Block of Tin",
+      "block.cm.machine_press": "Machine Press",
       "item.cm.aluminium_armor_helmet": "Aluminium Helmet",
       "item.cm.aluminium_armor_boots": "Aluminium Boots",
       "item.cm.strong_bronze_armor_leggings": "Bronze Leggings",
@@ -919,6 +1019,15 @@
       {
         "name": "HomeCMD",
         "children": []
+      },
+      {
+        "name": "cmEnergySystem",
+        "children": [
+          {
+            "name": "Machineblocks",
+            "children": []
+          }
+        ]
       }
     ]
   },

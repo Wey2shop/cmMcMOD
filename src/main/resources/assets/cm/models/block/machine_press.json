@@ -1,0 +1,9 @@
+{
+  "parent": "cm:custom/machinepress",
+  "textures": {
+    "all": "cm:blocks/cauldron_inner",
+    "particle": "cm:blocks/cauldron_inner",
+    "0": "cm:blocks/tin_ore_ore_block",
+    "1": "cm:blocks/cauldron_inner"
+  }
+}

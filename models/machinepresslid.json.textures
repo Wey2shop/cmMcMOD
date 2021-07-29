@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "tin_ore_ore_block",
+        "1": "cauldron_inner"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "cm:custom/machinebase",
+  "textures": {
+    "all": "cm:blocks/aluminium_ore_ore_block",
+    "particle": "cm:blocks/aluminium_ore_ore_block",
+    "0": "cm:blocks/aluminium_ore_ore_block",
+    "1": "cm:blocks/cauldron_inner"
+  }
+}

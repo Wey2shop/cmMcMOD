@@ -1,0 +1,9 @@
+{
+  "parent": "cm:custom/machinepresslid",
+  "textures": {
+    "all": "cm:blocks/tin_ore_ore_block",
+    "particle": "cm:blocks/tin_ore_ore_block",
+    "0": "cm:blocks/tin_ore_ore_block",
+    "1": "cm:blocks/cauldron_inner"
+  }
+}
