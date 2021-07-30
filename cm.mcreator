@@ -919,6 +919,16 @@
         ]
       },
       "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "PressMachineGUI",
+      "type": "gui",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "press_machine_gui",
+      "path": "~/cmEnergySystem/Machineblocks"
     }
   ],
   "variable_elements": [
