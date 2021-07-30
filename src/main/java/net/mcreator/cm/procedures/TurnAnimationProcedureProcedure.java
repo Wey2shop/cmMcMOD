@@ -28,11 +28,11 @@ import net.mcreator.cm.item.BronzePressedplateItem;
 import net.mcreator.cm.item.BronzeItem;
 import net.mcreator.cm.item.AluminumPressedplateItem;
 import net.mcreator.cm.item.Aluminium_OreIngotItem;
+import net.mcreator.cm.block.TurnAnimation4Block;
+import net.mcreator.cm.block.TurnAnimation3Block;
+import net.mcreator.cm.block.TurnAnimation2Block;
+import net.mcreator.cm.block.TurnAnimation1Block;
 import net.mcreator.cm.block.MachinePressLIDBlock;
-import net.mcreator.cm.block.MachinePressBlock;
-import net.mcreator.cm.block.MachinePressAnimation3Block;
-import net.mcreator.cm.block.MachinePressAnimation2Block;
-import net.mcreator.cm.block.MachinePressAnimation1Block;
 import net.mcreator.cm.block.MachineBaseBlock;
 import net.mcreator.cm.CmModElements;
 import net.mcreator.cm.CmMod;
@@ -40,35 +40,35 @@ import net.mcreator.cm.CmMod;
 import java.util.Map;
 
 @CmModElements.ModElement.Tag
-public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModElement {
-	public MachineBlockAnimationSCRIPTProcedure(CmModElements instance) {
-		super(instance, 73);
+public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
+	public TurnAnimationProcedureProcedure(CmModElements instance) {
+		super(instance, 84);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				CmMod.LOGGER.warn("Failed to load dependency entity for procedure MachineBlockAnimationSCRIPT!");
+				CmMod.LOGGER.warn("Failed to load dependency entity for procedure TurnAnimationProcedure!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				CmMod.LOGGER.warn("Failed to load dependency x for procedure MachineBlockAnimationSCRIPT!");
+				CmMod.LOGGER.warn("Failed to load dependency x for procedure TurnAnimationProcedure!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				CmMod.LOGGER.warn("Failed to load dependency y for procedure MachineBlockAnimationSCRIPT!");
+				CmMod.LOGGER.warn("Failed to load dependency y for procedure TurnAnimationProcedure!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				CmMod.LOGGER.warn("Failed to load dependency z for procedure MachineBlockAnimationSCRIPT!");
+				CmMod.LOGGER.warn("Failed to load dependency z for procedure TurnAnimationProcedure!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				CmMod.LOGGER.warn("Failed to load dependency world for procedure MachineBlockAnimationSCRIPT!");
+				CmMod.LOGGER.warn("Failed to load dependency world for procedure TurnAnimationProcedure!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -79,7 +79,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 		if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == MachineBaseBlock.block.getDefaultState().getBlock())
 				&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == MachinePressLIDBlock.block.getDefaultState()
 						.getBlock()))) {
-			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState().getBlock())
+			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState().getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == new ItemStack(BronzeItem.block, (int) (1)).getItem()))) {
 				(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
@@ -88,7 +88,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 				}
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+					BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -140,7 +140,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 					private void run() {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+							BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -192,7 +192,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							private void run() {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = MachinePressAnimation3Block.block.getDefaultState();
+									BlockState _bs = TurnAnimation4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -244,7 +244,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -276,7 +276,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 										}
 										MinecraftForge.EVENT_BUS.unregister(this);
 									}
-								}.start(world, (int) 20);
+								}.start(world, (int) 10);
 								new Object() {
 									private int ticks = 0;
 									private float waitTicks;
@@ -299,7 +299,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -331,7 +331,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 										}
 										MinecraftForge.EVENT_BUS.unregister(this);
 									}
-								}.start(world, (int) 20);
+								}.start(world, (int) 10);
 								new Object() {
 									private int ticks = 0;
 									private float waitTicks;
@@ -354,7 +354,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressBlock.block.getDefaultState();
+											BlockState _bs = TurnAnimation1Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -391,14 +391,14 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 										}
 										MinecraftForge.EVENT_BUS.unregister(this);
 									}
-								}.start(world, (int) 20);
+								}.start(world, (int) 10);
 								MinecraftForge.EVENT_BUS.unregister(this);
 							}
-						}.start(world, (int) 20);
+						}.start(world, (int) 10);
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, (int) 20);
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
+				}.start(world, (int) 10);
+			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == new ItemStack(Copper_OreIngotItem.block, (int) (1)).getItem()))) {
@@ -408,7 +408,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 				}
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+					BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -460,7 +460,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 					private void run() {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+							BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -512,7 +512,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							private void run() {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = MachinePressAnimation3Block.block.getDefaultState();
+									BlockState _bs = TurnAnimation4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -564,7 +564,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -619,7 +619,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -674,7 +674,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressBlock.block.getDefaultState();
+											BlockState _bs = TurnAnimation1Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -718,7 +718,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
 				}.start(world, (int) 20);
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
+			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == new ItemStack(Aluminium_OreIngotItem.block, (int) (1)).getItem()))) {
@@ -728,7 +728,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 				}
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+					BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -780,7 +780,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 					private void run() {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+							BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -832,7 +832,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							private void run() {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = MachinePressAnimation3Block.block.getDefaultState();
+									BlockState _bs = TurnAnimation4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -884,7 +884,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -939,7 +939,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -994,7 +994,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressBlock.block.getDefaultState();
+											BlockState _bs = TurnAnimation1Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1038,7 +1038,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
 				}.start(world, (int) 20);
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
+			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == new ItemStack(Tin_OreIngotItem.block, (int) (1)).getItem()))) {
@@ -1048,7 +1048,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 				}
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+					BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1100,7 +1100,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 					private void run() {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+							BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1152,7 +1152,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							private void run() {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = MachinePressAnimation3Block.block.getDefaultState();
+									BlockState _bs = TurnAnimation4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1204,7 +1204,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1259,7 +1259,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1314,7 +1314,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressBlock.block.getDefaultState();
+											BlockState _bs = TurnAnimation1Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1358,7 +1358,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
 				}.start(world, (int) 20);
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
+			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == new ItemStack(Items.IRON_INGOT, (int) (1)).getItem()))) {
@@ -1368,7 +1368,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 				}
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+					BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1420,7 +1420,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 					private void run() {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+							BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1472,7 +1472,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							private void run() {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = MachinePressAnimation3Block.block.getDefaultState();
+									BlockState _bs = TurnAnimation4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1524,7 +1524,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1579,7 +1579,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1634,7 +1634,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressBlock.block.getDefaultState();
+											BlockState _bs = TurnAnimation1Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1678,7 +1678,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
 				}.start(world, (int) 20);
-			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
+			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == new ItemStack(Items.GOLD_INGOT, (int) (1)).getItem()))) {
@@ -1688,7 +1688,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 				}
 				{
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-					BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+					BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 					BlockState _bso = world.getBlockState(_bp);
 					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 						Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1740,7 +1740,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 					private void run() {
 						{
 							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-							BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+							BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 							BlockState _bso = world.getBlockState(_bp);
 							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1792,7 +1792,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							private void run() {
 								{
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-									BlockState _bs = MachinePressAnimation3Block.block.getDefaultState();
+									BlockState _bs = TurnAnimation4Block.block.getDefaultState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1844,7 +1844,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation2Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation3Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1899,7 +1899,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressAnimation1Block.block.getDefaultState();
+											BlockState _bs = TurnAnimation2Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
@@ -1954,7 +1954,7 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 									private void run() {
 										{
 											BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-											BlockState _bs = MachinePressBlock.block.getDefaultState();
+											BlockState _bs = TurnAnimation1Block.block.getDefaultState();
 											BlockState _bso = world.getBlockState(_bp);
 											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());

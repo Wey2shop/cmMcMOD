@@ -1,0 +1,10 @@
+{
+  "parent": "cm:custom/turnanimation4",
+  "textures": {
+    "all": "cm:blocks/aluminium_ore_ore",
+    "particle": "cm:blocks/aluminium_ore_ore",
+    "0": "cm:blocks/aluminium_ore_ore",
+    "aluminiumtexture": "cm:blocks/aluminium_ore_ore_block",
+    "1": "cm:blocks/cauldron_inner"
+  }
+}

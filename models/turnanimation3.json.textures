@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "aluminium_ore_ore",
+        "aluminiumtexture": "aluminium_ore_ore_block",
+        "1": "cauldron_inner"
+      },
+      "name": "default"
+    }
+  }
+}
