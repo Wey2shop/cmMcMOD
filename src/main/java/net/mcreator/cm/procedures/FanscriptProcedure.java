@@ -66,6 +66,12 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 		}.getMaxEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) > 50)) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				int _amount = (int) 100;
+				if (_ent != null)
+					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
+			}
+			{
+				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				int _amount = (int) 50;
 				if (_ent != null)
 					_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
@@ -87,12 +93,12 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 				}
 			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.UP)) {
 				if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
-						new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), z + (6 / 2d)), null)
-						.stream().sorted(new Object() {
+						new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), (y + 3) - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), (y + 3) + (6 / 2d)),
+						null).stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, (y + 3), z)).findFirst().orElse(null)) != null)) {
+						}.compareDistOf(x, (y + 3), (y + 3))).findFirst().orElse(null)) != null)) {
 					((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
 							new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), z + (6 / 2d)), null)
 							.stream().sorted(new Object() {

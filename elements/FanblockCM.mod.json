@@ -2,8 +2,8 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "cauldron_inner",
-    "textureTop": "",
+    "texture": "cauldron_side",
+    "textureTop": "cauldron_inner",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
