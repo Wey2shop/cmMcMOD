@@ -11,23 +11,24 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.state.Property;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.cm.item.Tin_OreIngotItem;
 import net.mcreator.cm.item.TinPressedplateItem;
+import net.mcreator.cm.item.TinDiskItem;
 import net.mcreator.cm.item.IronPressedplateItem;
+import net.mcreator.cm.item.IronDiskItem;
+import net.mcreator.cm.item.GolddiskItem;
 import net.mcreator.cm.item.GoldPressedplateItem;
-import net.mcreator.cm.item.Copper_OreIngotItem;
 import net.mcreator.cm.item.CopperPressedplateItem;
+import net.mcreator.cm.item.CopperDiskItem;
 import net.mcreator.cm.item.BronzePressedplateItem;
 import net.mcreator.cm.item.BronzeItem;
 import net.mcreator.cm.item.AluminumPressedplateItem;
-import net.mcreator.cm.item.Aluminium_OreIngotItem;
+import net.mcreator.cm.item.AluminiumDiskItem;
 import net.mcreator.cm.block.TurnAnimation4Block;
 import net.mcreator.cm.block.TurnAnimation3Block;
 import net.mcreator.cm.block.TurnAnimation2Block;
@@ -81,7 +82,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 						.getBlock()))) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState().getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == new ItemStack(BronzeItem.block, (int) (1)).getItem()))) {
+							.getItem() == new ItemStack(BronzePressedplateItem.block, (int) (1)).getItem()))) {
 				(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Removing 1 bronze ingot From Stack"), (false));
@@ -385,7 +386,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 											((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("6"), (false));
 										}
 										if (entity instanceof PlayerEntity) {
-											ItemStack _setstack = new ItemStack(BronzePressedplateItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(BronzeItem.block, (int) (1));
 											_setstack.setCount((int) 1);
 											ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 										}
@@ -401,7 +402,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == new ItemStack(Copper_OreIngotItem.block, (int) (1)).getItem()))) {
+							.getItem() == new ItemStack(CopperPressedplateItem.block, (int) (1)).getItem()))) {
 				(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Removing 1 copper ingot From Stack"), (false));
@@ -705,7 +706,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 											((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("6"), (false));
 										}
 										if (entity instanceof PlayerEntity) {
-											ItemStack _setstack = new ItemStack(CopperPressedplateItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(CopperDiskItem.block, (int) (1));
 											_setstack.setCount((int) 1);
 											ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 										}
@@ -721,7 +722,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == new ItemStack(Aluminium_OreIngotItem.block, (int) (1)).getItem()))) {
+							.getItem() == new ItemStack(AluminumPressedplateItem.block, (int) (1)).getItem()))) {
 				(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Removing 1 aluminium ingot From Stack"), (false));
@@ -1025,7 +1026,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 											((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("6"), (false));
 										}
 										if (entity instanceof PlayerEntity) {
-											ItemStack _setstack = new ItemStack(AluminumPressedplateItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(AluminiumDiskItem.block, (int) (1));
 											_setstack.setCount((int) 1);
 											ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 										}
@@ -1041,7 +1042,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == new ItemStack(Tin_OreIngotItem.block, (int) (1)).getItem()))) {
+							.getItem() == new ItemStack(TinPressedplateItem.block, (int) (1)).getItem()))) {
 				(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Removing 1 Tin ingot From Stack"), (false));
@@ -1345,7 +1346,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 											((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("6"), (false));
 										}
 										if (entity instanceof PlayerEntity) {
-											ItemStack _setstack = new ItemStack(TinPressedplateItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(TinDiskItem.block, (int) (1));
 											_setstack.setCount((int) 1);
 											ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 										}
@@ -1361,7 +1362,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == new ItemStack(Items.IRON_INGOT, (int) (1)).getItem()))) {
+							.getItem() == new ItemStack(IronPressedplateItem.block, (int) (1)).getItem()))) {
 				(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Removing 1 Iron ingot From Stack"), (false));
@@ -1665,7 +1666,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 											((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("6"), (false));
 										}
 										if (entity instanceof PlayerEntity) {
-											ItemStack _setstack = new ItemStack(IronPressedplateItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(IronDiskItem.block, (int) (1));
 											_setstack.setCount((int) 1);
 											ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 										}
@@ -1681,7 +1682,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState()
 					.getBlock())
 					&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == new ItemStack(Items.GOLD_INGOT, (int) (1)).getItem()))) {
+							.getItem() == new ItemStack(GoldPressedplateItem.block, (int) (1)).getItem()))) {
 				(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Removing 1 Gold ingot From Stack"), (false));
@@ -1985,7 +1986,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 											((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("6"), (false));
 										}
 										if (entity instanceof PlayerEntity) {
-											ItemStack _setstack = new ItemStack(GoldPressedplateItem.block, (int) (1));
+											ItemStack _setstack = new ItemStack(GolddiskItem.block, (int) (1));
 											_setstack.setCount((int) 1);
 											ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 										}

@@ -72,6 +72,7 @@ public class CmModVariables {
 			nbt.putDouble("home_y", instance.home_y);
 			nbt.putDouble("has_home", instance.has_home);
 			nbt.putDouble("time", instance.time);
+			nbt.putDouble("Voltage", instance.Voltage);
 			return nbt;
 		}
 
@@ -83,6 +84,7 @@ public class CmModVariables {
 			instance.home_y = nbt.getDouble("home_y");
 			instance.has_home = nbt.getDouble("has_home");
 			instance.time = nbt.getDouble("time");
+			instance.Voltage = nbt.getDouble("Voltage");
 		}
 	}
 
@@ -92,6 +94,7 @@ public class CmModVariables {
 		public double home_y = 0;
 		public double has_home = 0.0;
 		public double time = 5.0;
+		public double Voltage = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				CmMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -128,6 +131,7 @@ public class CmModVariables {
 		clone.home_y = original.home_y;
 		clone.has_home = original.has_home;
 		clone.time = original.time;
+		clone.Voltage = original.Voltage;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -157,6 +161,7 @@ public class CmModVariables {
 					variables.home_y = message.data.home_y;
 					variables.has_home = message.data.has_home;
 					variables.time = message.data.time;
+					variables.Voltage = message.data.Voltage;
 				}
 			});
 			context.setPacketHandled(true);

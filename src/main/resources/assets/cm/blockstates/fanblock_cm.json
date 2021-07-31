@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "cm:block/fanblock_cm"
+    },
+    "facing=east": {
+      "model": "cm:block/fanblock_cm",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "cm:block/fanblock_cm",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cm:block/fanblock_cm",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "cm:block/fanblock_cm",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "cm:block/fanblock_cm",
+      "x": 90
+    }
+  }
+}

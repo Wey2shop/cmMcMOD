@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "cm:blocks/placeholder",
+    "up": "cm:blocks/placeholder",
+    "north": "cm:blocks/placeholder",
+    "east": "cm:blocks/placeholder",
+    "south": "cm:blocks/placeholder",
+    "west": "cm:blocks/placeholder",
+    "particle": "cm:blocks/placeholder"
+  }
+}

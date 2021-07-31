@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "tin_ore_ore_block",
+        "0": "solar_panel",
+        "aluminiumtexture": "tin_ore_ore_block",
         "1": "solar_panel"
       },
       "name": "default"

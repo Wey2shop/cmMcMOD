@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "cm:blocks/cauldron_inner",
+    "up": "cm:blocks/cauldron_inner",
+    "north": "cm:blocks/cauldron_inner",
+    "east": "cm:blocks/cauldron_inner",
+    "south": "cm:blocks/cauldron_inner",
+    "west": "cm:blocks/cauldron_inner",
+    "particle": "cm:blocks/cauldron_inner"
+  }
+}
