@@ -1,12 +1,10 @@
 {
-  "parent": "block/cube",
+  "parent": "cm:custom/batterycapacitor",
   "textures": {
-    "down": "cm:blocks/placeholder",
-    "up": "cm:blocks/placeholder",
-    "north": "cm:blocks/placeholder",
-    "east": "cm:blocks/placeholder",
-    "south": "cm:blocks/placeholder",
-    "west": "cm:blocks/placeholder",
-    "particle": "cm:blocks/placeholder"
+    "all": "cm:blocks/copper_ore_ore_block",
+    "particle": "cm:blocks/copper_ore_ore_block",
+    "0": "cm:blocks/cauldron_inner",
+    "1": "cm:blocks/aluminium_ore_ore_block",
+    "3": "cm:blocks/copper_ore_ore_block"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "cauldron_inner",
+        "1": "aluminium_ore_ore_block",
+        "3": "copper_ore_ore_block"
+      },
+      "name": "default"
+    }
+  }
+}
