@@ -3,10 +3,10 @@
   "textures": {
     "down": "cm:blocks/cauldron_side",
     "up": "cm:blocks/cauldron_inner",
-    "north": "cm:blocks/cauldron_side",
-    "east": "cm:blocks/cauldron_side",
-    "south": "cm:blocks/cauldron_side",
-    "west": "cm:blocks/cauldron_side",
+    "north": "cm:blocks/placeholder",
+    "east": "cm:blocks/placeholder",
+    "south": "cm:blocks/placeholder",
+    "west": "cm:blocks/placeholder",
     "particle": "cm:blocks/cauldron_side"
   }
 }

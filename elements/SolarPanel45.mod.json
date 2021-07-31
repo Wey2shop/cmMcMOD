@@ -27,7 +27,7 @@
         "my": -4.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 11.0,
         "Mz": 16.0,
         "subtract": false
       }
@@ -94,10 +94,10 @@
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
-    "energyInitial": 0,
-    "energyCapacity": 400000,
-    "energyMaxReceive": 200,
-    "energyMaxExtract": 200,
+    "energyInitial": 15,
+    "energyCapacity": 15,
+    "energyMaxReceive": 15,
+    "energyMaxExtract": 15,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],

@@ -107,7 +107,7 @@ public class SolarPanel45Block extends CmModElements.ModElement {
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(0, -4, 0, 16, 16, 16)).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.or(makeCuboidShape(0, -4, 0, 16, 11, 16)).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -299,7 +299,7 @@ public class SolarPanel45Block extends CmModElements.ModElement {
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
-		private final EnergyStorage energyStorage = new EnergyStorage(400000, 200, 200, 0) {
+		private final EnergyStorage energyStorage = new EnergyStorage(15, 15, 15, 15) {
 			@Override
 			public int receiveEnergy(int maxReceive, boolean simulate) {
 				int retval = super.receiveEnergy(maxReceive, simulate);

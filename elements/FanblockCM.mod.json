@@ -4,10 +4,10 @@
   "definition": {
     "texture": "cauldron_side",
     "textureTop": "cauldron_inner",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
+    "textureLeft": "placeholder",
+    "textureFront": "placeholder",
+    "textureRight": "placeholder",
+    "textureBack": "placeholder",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 2,
@@ -95,15 +95,12 @@
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": true,
     "energyInitial": 0,
-    "energyCapacity": 50,
-    "energyMaxReceive": 50,
-    "energyMaxExtract": 50,
+    "energyCapacity": 1000,
+    "energyMaxReceive": 15,
+    "energyMaxExtract": 30,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "Fanscript"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

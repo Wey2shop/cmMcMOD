@@ -299,7 +299,7 @@ public class SolarPanelONEBlock extends CmModElements.ModElement {
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
-		private final EnergyStorage energyStorage = new EnergyStorage(0, 10, 10, 0) {
+		private final EnergyStorage energyStorage = new EnergyStorage(15, 15, 15, 15) {
 			@Override
 			public int receiveEnergy(int maxReceive, boolean simulate) {
 				int retval = super.receiveEnergy(maxReceive, simulate);
