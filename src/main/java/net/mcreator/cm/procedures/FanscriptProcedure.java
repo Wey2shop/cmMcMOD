@@ -1,7 +1,5 @@
 package net.mcreator.cm.procedures;
 
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.energy.CapabilityEnergy;
 
 import net.minecraft.world.IWorld;
@@ -70,283 +68,287 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 			}
-			{
-				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				int _amount = (int) 50;
-				if (_ent != null)
-					_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
-							.ifPresent(capability -> capability.drain(_amount, IFluidHandler.FluidAction.EXECUTE));
+		}
+		if (((new Object() {
+			public Direction getDirection(BlockPos pos) {
+				try {
+					BlockState _bs = world.getBlockState(pos);
+					DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (property != null)
+						return _bs.get(property);
+					return Direction.getFacingFromAxisDirection(
+							_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+							Direction.AxisDirection.POSITIVE);
+				} catch (Exception e) {
+					return Direction.NORTH;
+				}
 			}
-			if (((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					try {
-						BlockState _bs = world.getBlockState(pos);
-						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (property != null)
-							return _bs.get(property);
-						return Direction.getFacingFromAxisDirection(
-								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
-								Direction.AxisDirection.POSITIVE);
-					} catch (Exception e) {
-						return Direction.NORTH;
-					}
-				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.UP)) {
-				if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
-						new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), (y + 3) - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), (y + 3) + (6 / 2d)),
-						null).stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-							}
-						}.compareDistOf(x, (y + 3), (y + 3))).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
-							new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, (y + 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
-				}
-				if ((((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.UP)) {
+			if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+					new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), (y + 3) - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), (y + 3) + (6 / 2d)),
+					null).stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, (y + 3), (y + 3))).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, (y + 3), z)).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+						}.compareDistOf(x, (y + 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+			if ((((Entity) world
+					.getEntitiesWithinAABB(ItemEntity.class,
 							new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, (y + 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, (y + 3), z)).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+						new AxisAlignedBB(x - (6 / 2d), (y + 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y + 3) + (6 / 2d), z + (6 / 2d)), null)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+							}
+						}.compareDistOf(x, (y + 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+		} else if (((new Object() {
+			public Direction getDirection(BlockPos pos) {
+				try {
+					BlockState _bs = world.getBlockState(pos);
+					DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (property != null)
+						return _bs.get(property);
+					return Direction.getFacingFromAxisDirection(
+							_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+							Direction.AxisDirection.POSITIVE);
+				} catch (Exception e) {
+					return Direction.NORTH;
 				}
-			} else if (((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					try {
-						BlockState _bs = world.getBlockState(pos);
-						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (property != null)
-							return _bs.get(property);
-						return Direction.getFacingFromAxisDirection(
-								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
-								Direction.AxisDirection.POSITIVE);
-					} catch (Exception e) {
-						return Direction.NORTH;
-					}
-				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.DOWN)) {
-				if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+			}
+		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.DOWN)) {
+			if ((((Entity) world
+					.getEntitiesWithinAABB(LivingEntity.class,
+							new AxisAlignedBB(x - (6 / 2d), (y - 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y - 3) + (6 / 2d), z + (6 / 2d)), null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), (y - 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y - 3) + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+						}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+			if ((((Entity) world
+					.getEntitiesWithinAABB(ItemEntity.class,
 							new AxisAlignedBB(x - (6 / 2d), (y - 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y - 3) + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
-				}
-				if ((((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), (y - 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y - 3) + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
-							new AxisAlignedBB(x - (6 / 2d), (y - 3) - (6 / 2d), z - (6 / 2d), x + (6 / 2d), (y - 3) + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+						}.compareDistOf(x, (y - 3), z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+		} else if (((new Object() {
+			public Direction getDirection(BlockPos pos) {
+				try {
+					BlockState _bs = world.getBlockState(pos);
+					DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (property != null)
+						return _bs.get(property);
+					return Direction.getFacingFromAxisDirection(
+							_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+							Direction.AxisDirection.POSITIVE);
+				} catch (Exception e) {
+					return Direction.NORTH;
 				}
-			} else if (((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					try {
-						BlockState _bs = world.getBlockState(pos);
-						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (property != null)
-							return _bs.get(property);
-						return Direction.getFacingFromAxisDirection(
-								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
-								Direction.AxisDirection.POSITIVE);
-					} catch (Exception e) {
-						return Direction.NORTH;
-					}
-				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH)) {
-				if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+			}
+		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.NORTH)) {
+			if ((((Entity) world
+					.getEntitiesWithinAABB(LivingEntity.class,
+							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z - 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z - 3) + (6 / 2d)), null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z - 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z - 3) + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+						}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+			if ((((Entity) world
+					.getEntitiesWithinAABB(ItemEntity.class,
 							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z - 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z - 3) + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
-				}
-				if ((((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z - 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z - 3) + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
-							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z - 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z - 3) + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+						}.compareDistOf(x, y, (z - 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+		} else if (((new Object() {
+			public Direction getDirection(BlockPos pos) {
+				try {
+					BlockState _bs = world.getBlockState(pos);
+					DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (property != null)
+						return _bs.get(property);
+					return Direction.getFacingFromAxisDirection(
+							_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+							Direction.AxisDirection.POSITIVE);
+				} catch (Exception e) {
+					return Direction.NORTH;
 				}
-			} else if (((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					try {
-						BlockState _bs = world.getBlockState(pos);
-						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (property != null)
-							return _bs.get(property);
-						return Direction.getFacingFromAxisDirection(
-								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
-								Direction.AxisDirection.POSITIVE);
-					} catch (Exception e) {
-						return Direction.NORTH;
-					}
-				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH)) {
-				if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+			}
+		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.SOUTH)) {
+			if ((((Entity) world
+					.getEntitiesWithinAABB(LivingEntity.class,
+							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z + 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z + 3) + (6 / 2d)), null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z + 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z + 3) + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+						}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+			if ((((Entity) world
+					.getEntitiesWithinAABB(ItemEntity.class,
 							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z + 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z + 3) + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
-				}
-				if ((((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
 						new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z + 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z + 3) + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
-							new AxisAlignedBB(x - (6 / 2d), y - (6 / 2d), (z + 3) - (6 / 2d), x + (6 / 2d), y + (6 / 2d), (z + 3) + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+						}.compareDistOf(x, y, (z + 3))).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+		} else if (((new Object() {
+			public Direction getDirection(BlockPos pos) {
+				try {
+					BlockState _bs = world.getBlockState(pos);
+					DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (property != null)
+						return _bs.get(property);
+					return Direction.getFacingFromAxisDirection(
+							_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+							Direction.AxisDirection.POSITIVE);
+				} catch (Exception e) {
+					return Direction.NORTH;
 				}
-			} else if (((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					try {
-						BlockState _bs = world.getBlockState(pos);
-						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (property != null)
-							return _bs.get(property);
-						return Direction.getFacingFromAxisDirection(
-								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
-								Direction.AxisDirection.POSITIVE);
-					} catch (Exception e) {
-						return Direction.NORTH;
-					}
-				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST)) {
-				if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+			}
+		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.WEST)) {
+			if ((((Entity) world
+					.getEntitiesWithinAABB(LivingEntity.class,
+							new AxisAlignedBB((x - 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x - 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
 						new AxisAlignedBB((x - 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x - 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+						}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+			if ((((Entity) world
+					.getEntitiesWithinAABB(ItemEntity.class,
 							new AxisAlignedBB((x - 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x - 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
-				}
-				if ((((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
 						new AxisAlignedBB((x - 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x - 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
-							new AxisAlignedBB((x - 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x - 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+						}.compareDistOf((x - 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+		} else if (((new Object() {
+			public Direction getDirection(BlockPos pos) {
+				try {
+					BlockState _bs = world.getBlockState(pos);
+					DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (property != null)
+						return _bs.get(property);
+					return Direction.getFacingFromAxisDirection(
+							_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
+							Direction.AxisDirection.POSITIVE);
+				} catch (Exception e) {
+					return Direction.NORTH;
 				}
-			} else if (((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					try {
-						BlockState _bs = world.getBlockState(pos);
-						DirectionProperty property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (property != null)
-							return _bs.get(property);
-						return Direction.getFacingFromAxisDirection(
-								_bs.get((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis")),
-								Direction.AxisDirection.POSITIVE);
-					} catch (Exception e) {
-						return Direction.NORTH;
-					}
-				}
-			}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST)) {
-				if ((((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+			}
+		}.getDirection(new BlockPos((int) x, (int) y, (int) z))) == Direction.EAST)) {
+			if ((((Entity) world
+					.getEntitiesWithinAABB(LivingEntity.class,
+							new AxisAlignedBB((x + 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x + 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
 						new AxisAlignedBB((x + 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x + 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(LivingEntity.class,
+						}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
+			}
+			if ((((Entity) world
+					.getEntitiesWithinAABB(ItemEntity.class,
 							new AxisAlignedBB((x + 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x + 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
-				}
-				if ((((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)) != null)) {
+				((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
 						new AxisAlignedBB((x + 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x + 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
 						.stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
 							}
-						}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)) != null)) {
-					((Entity) world.getEntitiesWithinAABB(ItemEntity.class,
-							new AxisAlignedBB((x + 3) - (6 / 2d), y - (6 / 2d), z - (6 / 2d), (x + 3) + (6 / 2d), y + (6 / 2d), z + (6 / 2d)), null)
-							.stream().sorted(new Object() {
-								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-									return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-								}
-							}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
-				}
+						}.compareDistOf((x + 3), y, z)).findFirst().orElse(null)).setMotion(0, 0.2, 0);
 			}
 		}
 	}
