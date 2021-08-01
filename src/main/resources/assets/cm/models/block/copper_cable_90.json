@@ -1,0 +1,9 @@
+{
+  "parent": "cm:custom/fixed9011",
+  "textures": {
+    "all": "cm:blocks/cable",
+    "particle": "cm:blocks/cable",
+    "0": "cm:blocks/tin_ore_ore_block",
+    "cable": "cm:blocks/cable"
+  }
+}

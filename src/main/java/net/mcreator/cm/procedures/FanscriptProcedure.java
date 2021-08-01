@@ -3,13 +3,12 @@ package net.mcreator.cm.procedures;
 import net.minecraftforge.energy.CapabilityEnergy;
 
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.cm.CmModVariables;
 import net.mcreator.cm.CmModElements;
 import net.mcreator.cm.CmMod;
 
@@ -96,9 +95,14 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Extracting 1 Energy"), (false));
-			}
+		}
+		{
+			double _setval = (double) (((entity.getCapability(CmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new CmModVariables.PlayerVariables())).GridPower) + (energy));
+			entity.getCapability(CmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.GridPower = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 	}
 }

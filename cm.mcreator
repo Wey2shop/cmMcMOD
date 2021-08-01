@@ -1295,6 +1295,186 @@
       "ids": {},
       "registry_name": "fanblock_cm",
       "path": "~/cmEnergySystem/FanBlock"
+    },
+    {
+      "name": "Coppercable",
+      "type": "block",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coppercable",
+      "path": "~/cmEnergySystem/Cable"
+    },
+    {
+      "name": "CopperCable90",
+      "type": "block",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_cable_90",
+      "path": "~/cmEnergySystem/Cable"
+    },
+    {
+      "name": "CopperCableScript",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_cable_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/cmEnergySystem/Cable"
+    },
+    {
+      "name": "CableWrench",
+      "type": "item",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cable_wrench",
+      "path": "~/cmEnergySystem/Cable"
+    },
+    {
+      "name": "CableWrenchActivateClipScript",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cable_wrench_activate_clip_script",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CableWrenchRotate",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cable_wrench_rotate",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpendGridPowerDEBUGCommandExecuted",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spend_grid_power_debug_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpendGridPowerDEBUG",
+      "type": "command",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spend_grid_power_debug",
+      "path": "~/cmEnergySystem/Debug Commands"
+    },
+    {
+      "name": "GridPowercmd",
+      "type": "command",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grid_powercmd",
+      "path": "~/cmEnergySystem/Debug Commands"
+    },
+    {
+      "name": "GridPowercmdCommandExecuted2",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grid_powercmd_command_executed_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1333,6 +1513,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "GridPower",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -1359,6 +1545,7 @@
       "item.cm.tin_disk": "Golddisk",
       "item.cm.aluminium_ore_ingot": "Aluminium Ingot",
       "block.cm.aluminium_ore_ore": "Aluminium Ore",
+      "block.cm.coppercable": "Coppercable",
       "item.cm.aluminium_armor_leggings": "Aluminium Leggings",
       "item.cm.tin_pressedplate": "Tin Pressed plate",
       "item.cm.aluminium_armor_chestplate": "Aluminium Chestplate",
@@ -1368,6 +1555,7 @@
       "item.cm.crushitem_animation": "Crushing",
       "block.cm.copper_ore_ore": "Copper ore",
       "itemGroup.tabcm_mcmod": "RLJR Items",
+      "item.cm.cable_wrench": "Cable Wrench",
       "item.cm.bronze_pressedplate": "Bronze Pressed plate",
       "block.cm.tin_ore_block": "Block of Tin",
       "item.cm.copper_disk": "Golddisk",
@@ -1382,6 +1570,7 @@
       "block.cm.batteryblock": "Batteryblock",
       "item.cm.diamond_fire_sword": "Diamond Fire Sword",
       "block.cm.aluminium_ore_block": "Block of Aluminium",
+      "block.cm.copper_cable_90": "Coppercable",
       "item.cm.tin_armor_chestplate": "Tin Chestplate",
       "block.cm.solar_panel_one": "Solar Panel",
       "item.cm.tin_armor_helmet": "Tin Helmet",
@@ -1458,6 +1647,14 @@
           },
           {
             "name": "FanBlock",
+            "children": []
+          },
+          {
+            "name": "Cable",
+            "children": []
+          },
+          {
+            "name": "Debug Commands",
             "children": []
           }
         ]

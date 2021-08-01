@@ -1,0 +1,9 @@
+{
+  "parent": "cm:custom/cable_south_too_north",
+  "textures": {
+    "all": "cm:blocks/cable",
+    "particle": "cm:blocks/cable",
+    "0": "cm:blocks/tin_ore_ore_block",
+    "1": "cm:blocks/cable"
+  }
+}

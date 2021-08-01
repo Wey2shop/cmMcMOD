@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "cm:block/coppercable"
+    },
+    "facing=east": {
+      "model": "cm:block/coppercable",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "cm:block/coppercable",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "cm:block/coppercable",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "cm:block/coppercable",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "cm:block/coppercable",
+      "x": 90
+    }
+  }
+}
