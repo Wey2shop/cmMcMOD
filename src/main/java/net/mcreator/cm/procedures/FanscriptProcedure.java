@@ -6,9 +6,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.entity.Entity;
 
-import net.mcreator.cm.CmModVariables;
 import net.mcreator.cm.CmModElements;
 import net.mcreator.cm.CmMod;
 
@@ -23,11 +21,6 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				CmMod.LOGGER.warn("Failed to load dependency entity for procedure Fanscript!");
-			return;
-		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				CmMod.LOGGER.warn("Failed to load dependency x for procedure Fanscript!");
@@ -48,7 +41,6 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 				CmMod.LOGGER.warn("Failed to load dependency world for procedure Fanscript!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
@@ -95,14 +87,6 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-		}
-		{
-			double _setval = (double) (((entity.getCapability(CmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new CmModVariables.PlayerVariables())).GridPower) + (energy));
-			entity.getCapability(CmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.GridPower = _setval;
-				capability.syncPlayerVariables(entity);
-			});
 		}
 	}
 }

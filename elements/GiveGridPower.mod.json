@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "command",
+  "definition": {
+    "commandName": "gridtest2",
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "GiveGridPowerCommandExecuted"
+    }
+  }
+}

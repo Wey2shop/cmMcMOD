@@ -1263,10 +1263,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -1475,6 +1471,33 @@
           }
         ]
       }
+    },
+    {
+      "name": "GiveGridPower",
+      "type": "command",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "give_grid_power",
+      "path": "~/cmEnergySystem/Debug Commands"
+    },
+    {
+      "name": "GiveGridPowerCommandExecuted",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "give_grid_power_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1529,16 +1552,16 @@
       "item.cm.copper_armor_helmet": "Copper Helmet",
       "block.cm.machineblock_4": "Machine components",
       "item.cm.copper_armor_leggings": "Copper Leggings",
-      "item.cm.strong_bronze_armor_boots": "Bronze Boots",
       "block.cm.fanblock_cm": "Fanblock CM",
+      "item.cm.strong_bronze_armor_boots": "Bronze Boots",
       "item.cm.iron_pressedplate": "Iron Pressed plate",
       "block.cm.turn_animation_4": "Turn Animation 4",
       "block.cm.turn_animation_3": "Turn Animation 3",
       "block.cm.turn_animation_2": "Turn Animation 2",
       "item.cm.aluminum_pressedplate": "Aluminium Pressed plate",
       "block.cm.copper_ore_block": "Block of Copper",
-      "item.cm.copper_armor_chestplate": "Copper Chestplate",
       "block.cm.machine_press_animation_1": "Machine Press Animation 1",
+      "item.cm.copper_armor_chestplate": "Copper Chestplate",
       "item.cm.copper_pressedplate": "Copper Pressed plate",
       "item.cm.gold_pressedplate": "Gold Pressedplate",
       "block.cm.crusher_4": "Crusher",
