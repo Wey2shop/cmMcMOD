@@ -88,7 +88,7 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 				if (_ent != null)
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.DOWN).ifPresent(capability -> capability.receiveEnergy(_amount, false));
 			}
-			if ((new Object() {
+			if (((new Object() {
 				public boolean canExtractEnergy(IWorld world, BlockPos pos) {
 					AtomicBoolean _retval = new AtomicBoolean(false);
 					TileEntity _ent = world.getTileEntity(pos);
@@ -96,10 +96,28 @@ public class FanscriptProcedure extends CmModElements.ModElement {
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.canExtract()));
 					return _retval.get();
 				}
-			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) z)))) {
+			}.canExtractEnergy(world, new BlockPos((int) x, (int) y, (int) z))) && ((new Object() {
+				public int getEnergyStored(IWorld world, BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(world, new BlockPos((int) x, (int) y, (int) z))) > 0))) {
+				energy = (double) (new Object() {
+					public int extractEnergySimulate(IWorld world, BlockPos pos, int _amount) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null)
+							_ent.getCapability(CapabilityEnergy.ENERGY, null)
+									.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
+						return _retval.get();
+					}
+				}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 1));
 				{
 					TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-					int _amount = (int) (energy);
+					int _amount = (int) 1;
 					if (_ent != null)
 						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> capability.extractEnergy(_amount, false));
 				}
