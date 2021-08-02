@@ -96,16 +96,16 @@
     "hasEnergyStorage": true,
     "energyInitial": 0,
     "energyCapacity": 1000,
-    "energyMaxReceive": 15,
-    "energyMaxExtract": 30,
+    "energyMaxReceive": 5,
+    "energyMaxExtract": 5,
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "FanblockCMOnBlockRightClicked"
-    },
     "onTickUpdate": {
       "name": "Fanscript"
+    },
+    "onDestroyedByPlayer": {
+      "name": "FanblockDestroyedByPlayer"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

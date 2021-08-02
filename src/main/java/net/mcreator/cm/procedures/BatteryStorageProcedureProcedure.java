@@ -70,7 +70,7 @@ public class BatteryStorageProcedureProcedure extends CmModElements.ModElement {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 15));
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 1));
 			down = (double) (new Object() {
 				public int receiveEnergySimulate(IWorld world, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -112,7 +112,7 @@ public class BatteryStorageProcedureProcedure extends CmModElements.ModElement {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 50));
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 1));
 			west = (double) (new Object() {
 				public int receiveEnergySimulate(IWorld world, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -196,7 +196,7 @@ public class BatteryStorageProcedureProcedure extends CmModElements.ModElement {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 50));
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 1));
 			south = (double) (new Object() {
 				public int receiveEnergySimulate(IWorld world, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
@@ -238,7 +238,7 @@ public class BatteryStorageProcedureProcedure extends CmModElements.ModElement {
 								.ifPresent(capability -> _retval.set(capability.extractEnergy(_amount, true)));
 					return _retval.get();
 				}
-			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 50));
+			}.extractEnergySimulate(world, new BlockPos((int) x, (int) y, (int) z), (int) 1));
 			north = (double) (new Object() {
 				public int receiveEnergySimulate(IWorld world, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);

@@ -18,14 +18,11 @@ import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.Mirror;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
@@ -45,6 +42,7 @@ import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
@@ -54,7 +52,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.cm.procedures.FanscriptProcedure;
-import net.mcreator.cm.procedures.FanblockCMOnBlockRightClickedProcedure;
+import net.mcreator.cm.procedures.FanblockDestroyedByPlayerProcedure;
 import net.mcreator.cm.itemgroup.CmMCMODItemGroup;
 import net.mcreator.cm.CmModElements;
 
@@ -152,19 +150,17 @@ public class FanblockCMBlock extends CmModElements.ModElement {
 		}
 
 		@Override
-		public ActionResultType onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand,
-				BlockRayTraceResult hit) {
-			super.onBlockActivated(state, world, pos, entity, hand, hit);
+		public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, FluidState fluid) {
+			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest, fluid);
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			Direction direction = hit.getFace();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				FanblockCMOnBlockRightClickedProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("world", world);
+				FanblockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
 			}
-			return ActionResultType.SUCCESS;
+			return retval;
 		}
 
 		@Override
@@ -322,7 +318,7 @@ public class FanblockCMBlock extends CmModElements.ModElement {
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
-		private final EnergyStorage energyStorage = new EnergyStorage(1000, 15, 30, 0) {
+		private final EnergyStorage energyStorage = new EnergyStorage(1000, 5, 5, 0) {
 			@Override
 			public int receiveEnergy(int maxReceive, boolean simulate) {
 				int retval = super.receiveEnergy(maxReceive, simulate);

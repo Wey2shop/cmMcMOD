@@ -1527,6 +1527,23 @@
           }
         ]
       }
+    },
+    {
+      "name": "FanblockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fanblock_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
