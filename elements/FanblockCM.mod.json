@@ -101,6 +101,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "FanblockCMOnBlockRightClicked"
+    },
+    "onTickUpdate": {
+      "name": "Fanscript"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

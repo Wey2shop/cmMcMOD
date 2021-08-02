@@ -1431,6 +1431,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1468,6 +1472,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1490,6 +1498,27 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "give_grid_power_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FanblockCMOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fanblock_cm_on_block_right_clicked",
       "metadata": {
         "dependencies": [
           {
@@ -1541,6 +1570,12 @@
       "name": "GridPower",
       "type": "number",
       "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Worldgrid",
+      "type": "number",
+      "scope": "world",
       "value": "0"
     }
   ],

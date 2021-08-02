@@ -1,5 +1,6 @@
 package net.mcreator.cm.procedures;
 
+import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -22,22 +23,18 @@ public class GridPowercmdCommandExecuted2Procedure extends CmModElements.ModElem
 				CmMod.LOGGER.warn("Failed to load dependency entity for procedure GridPowercmdCommandExecuted2!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
-		{
-			double _setval = (double) (((entity.getCapability(CmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new CmModVariables.PlayerVariables())).GridPower) - 100);
-			entity.getCapability(CmModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.GridPower = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				CmMod.LOGGER.warn("Failed to load dependency world for procedure GridPowercmdCommandExecuted2!");
+			return;
 		}
+		Entity entity = (Entity) dependencies.get("entity");
+		IWorld world = (IWorld) dependencies.get("world");
+		CmModVariables.WorldVariables.get(world).Worldgrid = (double) ((CmModVariables.WorldVariables.get(world).Worldgrid) - 100);
+		CmModVariables.WorldVariables.get(world).syncData(world);
 		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-			((PlayerEntity) entity).sendStatusMessage(
-					new StringTextComponent((("You Used 100 Grid Power. You have ") + ""
-							+ ((((entity.getCapability(CmModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new CmModVariables.PlayerVariables())).GridPower) + 100))
-							+ "" + (" Energy left on your grid."))),
-					(true));
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("You Used 100 Grid Power. You have ") + ""
+					+ (((CmModVariables.WorldVariables.get(world).Worldgrid) + 100)) + "" + (" Energy left on your grid."))), (true));
 		}
 	}
 }

@@ -57,6 +57,7 @@ public class GridPowercmdCommand extends CmModElements.ModElement {
 		{
 			Map<String, Object> $_dependencies = new HashMap<>();
 			$_dependencies.put("entity", entity);
+			$_dependencies.put("world", world);
 			GridPowercmdCommandExecuted2Procedure.executeProcedure($_dependencies);
 		}
 		return 0;
