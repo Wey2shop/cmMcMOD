@@ -1176,6 +1176,21 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}
 					}.start(world, (int) 20);
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("You need ") + "" + (((new Object() {
+							public int getEnergyStored(IWorld world, BlockPos pos) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(CapabilityEnergy.ENERGY, null)
+											.ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+								return _retval.get();
+							}
+						}.getEnergyStored(world, new BlockPos((int) (CmModVariables.WorldVariables.get(world).GridX),
+								(int) (CmModVariables.WorldVariables.get(world).Gridy), (int) (CmModVariables.WorldVariables.get(world).GridZ))))
+								- 500)) + "" + ("- More grid power"))), (true));
+					}
 				}
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
 					.getBlock())
@@ -1531,6 +1546,21 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}
 					}.start(world, (int) 20);
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("You need ") + "" + (((new Object() {
+							public int getEnergyStored(IWorld world, BlockPos pos) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(CapabilityEnergy.ENERGY, null)
+											.ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+								return _retval.get();
+							}
+						}.getEnergyStored(world, new BlockPos((int) (CmModVariables.WorldVariables.get(world).GridX),
+								(int) (CmModVariables.WorldVariables.get(world).Gridy), (int) (CmModVariables.WorldVariables.get(world).GridZ))))
+								- 500)) + "" + ("- More grid power"))), (true));
+					}
 				}
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
 					.getBlock())
@@ -1886,6 +1916,21 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}
 					}.start(world, (int) 20);
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("You need ") + "" + (((new Object() {
+							public int getEnergyStored(IWorld world, BlockPos pos) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(CapabilityEnergy.ENERGY, null)
+											.ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+								return _retval.get();
+							}
+						}.getEnergyStored(world, new BlockPos((int) (CmModVariables.WorldVariables.get(world).GridX),
+								(int) (CmModVariables.WorldVariables.get(world).Gridy), (int) (CmModVariables.WorldVariables.get(world).GridZ))))
+								- 500)) + "" + ("- More grid power"))), (true));
+					}
 				}
 			} else if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MachinePressBlock.block.getDefaultState()
 					.getBlock())
@@ -2241,6 +2286,21 @@ public class MachineBlockAnimationSCRIPTProcedure extends CmModElements.ModEleme
 							MinecraftForge.EVENT_BUS.unregister(this);
 						}
 					}.start(world, (int) 20);
+				} else {
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent((("You need ") + "" + (((new Object() {
+							public int getEnergyStored(IWorld world, BlockPos pos) {
+								AtomicInteger _retval = new AtomicInteger(0);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(CapabilityEnergy.ENERGY, null)
+											.ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+								return _retval.get();
+							}
+						}.getEnergyStored(world, new BlockPos((int) (CmModVariables.WorldVariables.get(world).GridX),
+								(int) (CmModVariables.WorldVariables.get(world).Gridy), (int) (CmModVariables.WorldVariables.get(world).GridZ))))
+								- 500)) + "" + ("- More grid power"))), (true));
+					}
 				}
 			}
 		}

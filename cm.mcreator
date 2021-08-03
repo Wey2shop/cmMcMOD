@@ -1589,6 +1589,47 @@
           }
         ]
       }
+    },
+    {
+      "name": "Statsgui",
+      "type": "gui",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "statsgui",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "GridStatsCommandExecuted",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grid_stats_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GridStats",
+      "type": "command",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grid_stats",
+      "path": "~/cmEnergySystem/Machineblocks"
     }
   ],
   "variable_elements": [

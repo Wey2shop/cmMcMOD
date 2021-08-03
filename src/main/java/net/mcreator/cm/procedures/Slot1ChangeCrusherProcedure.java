@@ -4,7 +4,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
@@ -20,13 +19,11 @@ import net.mcreator.cm.CmMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
-import java.util.HashMap;
 
 @CmModElements.ModElement.Tag
 public class Slot1ChangeCrusherProcedure extends CmModElements.ModElement {
 	public Slot1ChangeCrusherProcedure(CmModElements instance) {
 		super(instance, 66);
-		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -343,25 +340,6 @@ public class Slot1ChangeCrusherProcedure extends CmModElements.ModElement {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, (int) 20);
-		}
-	}
-
-	@SubscribeEvent
-	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			Entity entity = event.player;
-			World world = entity.world;
-			double i = entity.getPosX();
-			double j = entity.getPosY();
-			double k = entity.getPosZ();
-			Map<String, Object> dependencies = new HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("event", event);
-			this.executeProcedure(dependencies);
 		}
 	}
 }
