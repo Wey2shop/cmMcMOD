@@ -33,8 +33,8 @@ import net.mcreator.cm.block.TurnAnimation4Block;
 import net.mcreator.cm.block.TurnAnimation3Block;
 import net.mcreator.cm.block.TurnAnimation2Block;
 import net.mcreator.cm.block.TurnAnimation1Block;
+import net.mcreator.cm.block.Tin_OreBlockBlock;
 import net.mcreator.cm.block.MachinePressLIDBlock;
-import net.mcreator.cm.block.MachineBaseBlock;
 import net.mcreator.cm.CmModElements;
 import net.mcreator.cm.CmMod;
 
@@ -77,7 +77,7 @@ public class TurnAnimationProcedureProcedure extends CmModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == MachineBaseBlock.block.getDefaultState().getBlock())
+		if ((((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Tin_OreBlockBlock.block.getDefaultState().getBlock())
 				&& ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == MachinePressLIDBlock.block.getDefaultState()
 						.getBlock()))) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == TurnAnimation1Block.block.getDefaultState().getBlock())

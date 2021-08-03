@@ -3,7 +3,7 @@
   "textures": {
     "all": "cm:blocks/log_oak",
     "particle": "cm:blocks/log_oak",
-    "0": "cm:blocks/copper_ore_ore_block",
-    "1": "cm:blocks/tin_ore_ore_block"
+    "0": "cm:blocks/tin_ore_ore_block",
+    "1": "cm:blocks/solar_panel"
   }
 }

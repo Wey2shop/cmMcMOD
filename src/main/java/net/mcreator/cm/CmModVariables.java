@@ -70,6 +70,9 @@ public class CmModVariables {
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "cm_worldvars";
 		public double Worldgrid = 0;
+		public double GridX = 0;
+		public double Gridy = 0;
+		public double GridZ = 0;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -81,11 +84,17 @@ public class CmModVariables {
 		@Override
 		public void read(CompoundNBT nbt) {
 			Worldgrid = nbt.getDouble("Worldgrid");
+			GridX = nbt.getDouble("GridX");
+			Gridy = nbt.getDouble("Gridy");
+			GridZ = nbt.getDouble("GridZ");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
 			nbt.putDouble("Worldgrid", Worldgrid);
+			nbt.putDouble("GridX", GridX);
+			nbt.putDouble("Gridy", Gridy);
+			nbt.putDouble("GridZ", GridZ);
 			return nbt;
 		}
 

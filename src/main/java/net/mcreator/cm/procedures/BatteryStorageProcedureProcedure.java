@@ -8,6 +8,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.tileentity.TileEntity;
 
 import net.mcreator.cm.block.SolarPanelONEBlock;
+import net.mcreator.cm.block.SolarPanel45Block;
 import net.mcreator.cm.CmModElements;
 import net.mcreator.cm.CmMod;
 
@@ -59,8 +60,10 @@ public class BatteryStorageProcedureProcedure extends CmModElements.ModElement {
 					_ent.getCapability(CapabilityEnergy.ENERGY, Direction.UP).ifPresent(capability -> _retval.set(capability.canReceive()));
 				return _retval.get();
 			}
-		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) && ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
-				.getBlock() == SolarPanelONEBlock.block.getDefaultState().getBlock()))) {
+		}.canReceiveEnergy(world, new BlockPos((int) x, (int) (y - 1), (int) z))) && (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z)))
+				.getBlock() == SolarPanelONEBlock.block.getDefaultState().getBlock())
+				|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SolarPanel45Block.block.getDefaultState()
+						.getBlock())))) {
 			down = (double) (new Object() {
 				public int extractEnergySimulate(IWorld world, BlockPos pos, int _amount) {
 					AtomicInteger _retval = new AtomicInteger(0);
