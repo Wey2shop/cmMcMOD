@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "Plant texture trans2": "plant_texture_trans2",
+        "aert": "plant_texture_trans"
+      },
+      "name": "default"
+    }
+  }
+}

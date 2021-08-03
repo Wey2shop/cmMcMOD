@@ -1,0 +1,1513 @@
+{
+  "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        315,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        315,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    }
+  },
+  "elements": [
+    {
+      "name": "leafA",
+      "from": [
+        5,
+        5,
+        0
+      ],
+      "to": [
+        11,
+        5.1,
+        7
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": -22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leaf",
+      "from": [
+        8,
+        0,
+        8
+      ],
+      "to": [
+        8.5,
+        5.5,
+        8.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            9,
+            8.5,
+            14.5
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            9,
+            8.5,
+            14.5
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            7,
+            7,
+            7.5,
+            12.5
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            4.5,
+            14.5
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            13,
+            8.5,
+            13.5
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "leaf",
+      "from": [
+        8,
+        5.5,
+        8
+      ],
+      "to": [
+        8.5,
+        11,
+        8.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            9,
+            8.5,
+            14.5
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            9,
+            8.5,
+            14.5
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            7,
+            7,
+            7.5,
+            12.5
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            4.5,
+            14.5
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            13,
+            8.5,
+            13.5
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "leaf",
+      "from": [
+        8,
+        11,
+        8
+      ],
+      "to": [
+        8.5,
+        16.5,
+        8.5
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            9,
+            8.5,
+            14.5
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            9,
+            8.5,
+            14.5
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            7,
+            7,
+            7.5,
+            12.5
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            4.5,
+            14.5
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            13,
+            8.5,
+            13.5
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        4,
+        5,
+        2
+      ],
+      "to": [
+        10,
+        5.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        7,
+        5,
+        2
+      ],
+      "to": [
+        13,
+        5.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        5,
+        8,
+        3
+      ],
+      "to": [
+        11,
+        8.1,
+        10
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": -22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        3,
+        8,
+        2
+      ],
+      "to": [
+        9,
+        8.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        7,
+        8,
+        2
+      ],
+      "to": [
+        13,
+        8.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        5,
+        12,
+        3
+      ],
+      "to": [
+        11,
+        12.1,
+        10
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": -22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        7,
+        12,
+        2
+      ],
+      "to": [
+        13,
+        12.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        3,
+        12,
+        2
+      ],
+      "to": [
+        9,
+        12.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        3,
+        16,
+        2
+      ],
+      "to": [
+        9,
+        16.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        7,
+        16,
+        2
+      ],
+      "to": [
+        13,
+        16.1,
+        9
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -45.0
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        5,
+        15,
+        4
+      ],
+      "to": [
+        11,
+        15.1,
+        11
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": -22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        5,
+        15,
+        4
+      ],
+      "to": [
+        11,
+        15.1,
+        11
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": 22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        5,
+        11,
+        5
+      ],
+      "to": [
+        11,
+        11.1,
+        12
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": 22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "name": "leafA",
+      "from": [
+        5,
+        6,
+        8
+      ],
+      "to": [
+        11,
+        6.1,
+        15
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "x",
+        "angle": 22.5
+      },
+      "faces": {
+        "north": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            0.1
+          ]
+        },
+        "east": {
+          "texture": "#aert",
+          "uv": [
+            0,
+            0,
+            7,
+            0.1
+          ]
+        },
+        "south": {
+          "texture": "#aert",
+          "uv": [
+            8,
+            0,
+            14,
+            0.1
+          ]
+        },
+        "west": {
+          "texture": "#aert",
+          "uv": [
+            4,
+            9,
+            11,
+            9.1
+          ]
+        },
+        "up": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        },
+        "down": {
+          "texture": "#aert",
+          "uv": [
+            9,
+            0,
+            15,
+            7
+          ]
+        }
+      }
+    }
+  ]
+}

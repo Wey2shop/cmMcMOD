@@ -1,0 +1,9 @@
+{
+  "parent": "cm:custom/hemp1",
+  "textures": {
+    "all": "cm:blocks/plant_texture_trans",
+    "particle": "cm:blocks/plant_texture_trans",
+    "Plant texture trans2": "cm:blocks/plant_texture_trans2",
+    "aert": "cm:blocks/plant_texture_trans"
+  }
+}

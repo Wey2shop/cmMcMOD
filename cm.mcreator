@@ -1630,6 +1630,56 @@
       "ids": {},
       "registry_name": "grid_stats",
       "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "Hemp3",
+      "type": "block",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_3",
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "Hemp2",
+      "type": "block",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_2",
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "Hemp1",
+      "type": "block",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_1",
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "Hemp0",
+      "type": "block",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_0",
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "HempBaby",
+      "type": "block",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_baby",
+      "path": "~/CropsCM"
     }
   ],
   "variable_elements": [
@@ -1740,9 +1790,14 @@
       "item.cm.copper_disk": "Golddisk",
       "item.cm.aluminium_armor_boots": "Aluminium Boots",
       "item.cm.strong_bronze_armor_leggings": "Bronze Leggings",
+      "block.cm.hemp_3": "Hemp 3",
       "item.cm.copper_ore_ingot": "Copper Ingot",
+      "block.cm.hemp_2": "Hemp 3",
+      "block.cm.hemp_1": "Hemp 3",
+      "block.cm.hemp_0": "Hemp 3",
       "item.cm.strong_bronze_armor_chestplate": "Bronze Chestplate",
       "item.cm.strong_bronze_armor_helmet": "Bronze Helmet",
+      "block.cm.hemp_baby": "Hemp 3",
       "item.cm.tin_ore_ingot": "Tin Ingot",
       "item.cm.golddisk": "Golddisk",
       "item.cm.aluminium_disk": "Golddisk",
@@ -1837,6 +1892,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "CropsCM",
+        "children": []
       }
     ]
   },

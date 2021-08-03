@@ -61,14 +61,14 @@ public class GridStatsCommandExecutedProcedure extends CmModElements.ModElement 
 
 			private void run() {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
-							(("Grid Tie invertor Loation: ") + "" + ("X ") + "" + ((CmModVariables.WorldVariables.get(world).GridX)) + "" + ("  Y ")
-									+ "" + ((CmModVariables.WorldVariables.get(world).Gridy)) + "" + ("  Z ") + ""
+					((PlayerEntity) entity).sendStatusMessage(
+							new StringTextComponent((("Source: ") + "" + ("X ") + "" + ((CmModVariables.WorldVariables.get(world).GridX)) + ""
+									+ ("  Y ") + "" + ((CmModVariables.WorldVariables.get(world).Gridy)) + "" + ("  Z ") + ""
 									+ ((CmModVariables.WorldVariables.get(world).GridZ)))),
 							(true));
 				}
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
-		}.start(world, (int) 30);
+		}.start(world, (int) 15);
 	}
 }
