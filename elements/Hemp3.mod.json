@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Hemp 3",
+    "name": "Hemp",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -43,7 +43,7 @@
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:HempSeeds"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -69,10 +69,10 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "NORMAL",
+    "reactionToPushing": "DESTROY",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "PLANT"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -101,6 +101,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "Hemp3Drop"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

@@ -1680,6 +1680,140 @@
       "ids": {},
       "registry_name": "hemp_baby",
       "path": "~/CropsCM"
+    },
+    {
+      "name": "HempSeeds",
+      "type": "item",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_seeds",
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "SeedRclickPlanting",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "seed_rclick_planting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "Hemp0BlockAdded",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_0_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "Buds",
+      "type": "item",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "buds",
+      "path": "~/CropsCM"
+    },
+    {
+      "name": "Hemp3Drop",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_3_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HempBabyclickPlanting",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hemp_babyclick_planting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1769,6 +1903,7 @@
       "block.cm.machine_press_animation_1": "Machine Press Animation 1",
       "item.cm.copper_armor_chestplate": "Copper Chestplate",
       "item.cm.copper_pressedplate": "Copper Pressed plate",
+      "item.cm.buds": "Buds",
       "item.cm.gold_pressedplate": "Gold Pressedplate",
       "block.cm.crusher_4": "Crusher",
       "item.cm.tin_disk": "Golddisk",
@@ -1790,14 +1925,14 @@
       "item.cm.copper_disk": "Golddisk",
       "item.cm.aluminium_armor_boots": "Aluminium Boots",
       "item.cm.strong_bronze_armor_leggings": "Bronze Leggings",
-      "block.cm.hemp_3": "Hemp 3",
+      "block.cm.hemp_3": "Hemp",
       "item.cm.copper_ore_ingot": "Copper Ingot",
       "block.cm.hemp_2": "Hemp 3",
       "block.cm.hemp_1": "Hemp 3",
-      "block.cm.hemp_0": "Hemp 3",
+      "block.cm.hemp_0": "Hemp",
       "item.cm.strong_bronze_armor_chestplate": "Bronze Chestplate",
       "item.cm.strong_bronze_armor_helmet": "Bronze Helmet",
-      "block.cm.hemp_baby": "Hemp 3",
+      "block.cm.hemp_baby": "Baby Hemp",
       "item.cm.tin_ore_ingot": "Tin Ingot",
       "item.cm.golddisk": "Golddisk",
       "item.cm.aluminium_disk": "Golddisk",
@@ -1818,6 +1953,7 @@
       "item.cm.tin_armor_boots": "Tin Boots",
       "block.cm.solar_panel_45": "Solar Panel",
       "block.cm.machine_press": "Machine Press",
+      "item.cm.hemp_seeds": "Hemp Seeds",
       "item.cm.iron_disk": "Golddisk",
       "item.cm.aluminium_armor_helmet": "Aluminium Helmet",
       "item.cm.copper_armor_boots": "Copper Boots"

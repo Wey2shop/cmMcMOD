@@ -10,10 +10,10 @@
     "textureBack": "",
     "renderType": 2,
     "customModelName": "hempbaby:default",
-    "rotationMode": 2,
+    "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "sprig1",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -32,11 +32,11 @@
         "subtract": false
       }
     ],
-    "name": "Hemp 3",
+    "name": "Baby Hemp",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
-    "hasGravity": false,
+    "hasGravity": true,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:CmMCMOD"
@@ -72,7 +72,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "PLANT"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -101,6 +101,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "Hemp0BlockAdded"
+    },
+    "onBlockPlayedBy": {
+      "name": "HempBabyclickPlanting"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
