@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "command",
+  "definition": {
+    "commandName": "spawnnpc",
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "Spawnnnpc"
+    }
+  }
+}

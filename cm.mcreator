@@ -1873,6 +1873,62 @@
           }
         ]
       }
+    },
+    {
+      "name": "SummonNPC",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "summon_npc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/NPC"
+    },
+    {
+      "name": "SpawnNPC",
+      "type": "command",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spawn_npc",
+      "path": "~/NPC"
+    },
+    {
+      "name": "SPAWNTRADETest",
+      "type": "item",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spawntrade_test",
+      "path": "~/cmEnergySystem/Debug Commands"
+    },
+    {
+      "name": "Spawnnnpc",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spawnnnpc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/NPC"
     }
   ],
   "variable_elements": [
@@ -2001,6 +2057,7 @@
       "block.cm.aluminium_ore_block": "Block of Aluminium",
       "block.cm.copper_cable_90": "Coppercable",
       "item.cm.tin_armor_chestplate": "Tin Chestplate",
+      "item.cm.spawntrade_test": "SPAWNTRADE Test",
       "block.cm.solar_panel_one": "Solar Panel",
       "item.cm.tin_armor_helmet": "Tin Helmet",
       "block.cm.machine_press_lid": "Machine Press LID",
@@ -2091,6 +2148,10 @@
       },
       {
         "name": "CropsCM",
+        "children": []
+      },
+      {
+        "name": "NPC",
         "children": []
       }
     ]

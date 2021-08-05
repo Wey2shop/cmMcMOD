@@ -28,10 +28,15 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
 
+import net.mcreator.cm.procedures.TempleSpawnAdditionalGenerationConditionProcedure;
 import net.mcreator.cm.CmModElements;
 
 import java.util.Random;
+
+import com.google.common.collect.ImmutableMap;
 
 @CmModElements.ModElement.Tag
 public class TempleSpawnStructure extends CmModElements.ModElement {
@@ -56,19 +61,28 @@ public class TempleSpawnStructure extends CmModElements.ModElement {
 						dimensionCriteria = true;
 					if (!dimensionCriteria)
 						return false;
-					if ((random.nextInt(1000000) + 1) <= 100000) {
+					if ((random.nextInt(1000000) + 1) <= 50) {
 						int count = random.nextInt(1) + 1;
 						for (int a = 0; a < count; a++) {
 							int i = ci + random.nextInt(16);
 							int k = ck + random.nextInt(16);
-							int j = world.getHeight(Heightmap.Type.OCEAN_FLOOR_WG, i, k);
+							int j = world.getHeight(Heightmap.Type.WORLD_SURFACE_WG, i, k);
 							j -= 1;
+							BlockState blockAt = world.getBlockState(new BlockPos(i, j, k));
+							boolean blockCriteria = false;
+							if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
+								blockCriteria = true;
+							if (!blockCriteria)
+								continue;
 							Rotation rotation = Rotation.values()[random.nextInt(3)];
 							Mirror mirror = Mirror.values()[random.nextInt(2)];
 							BlockPos spawnTo = new BlockPos(i + 0, j + 0, k + 0);
 							int x = spawnTo.getX();
 							int y = spawnTo.getY();
 							int z = spawnTo.getZ();
+							if (!TempleSpawnAdditionalGenerationConditionProcedure
+									.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+								continue;
 							Template template = world.getWorld().getStructureTemplateManager()
 									.getTemplateDefaulted(new ResourceLocation("cm", "batemple"));
 							if (template == null)
