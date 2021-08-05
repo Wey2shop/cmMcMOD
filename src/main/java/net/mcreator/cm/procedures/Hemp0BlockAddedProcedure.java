@@ -16,6 +16,7 @@ import net.mcreator.cm.block.Hemp3Block;
 import net.mcreator.cm.block.Hemp2Block;
 import net.mcreator.cm.block.Hemp1Block;
 import net.mcreator.cm.block.Hemp0Block;
+import net.mcreator.cm.CmModVariables;
 import net.mcreator.cm.CmModElements;
 import net.mcreator.cm.CmMod;
 
@@ -75,19 +76,59 @@ public class Hemp0BlockAddedProcedure extends CmModElements.ModElement {
 				}
 
 				private void run() {
-					{
-						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-						BlockState _bs = Hemp0Block.block.getDefaultState();
-						BlockState _bso = world.getBlockState(_bp);
-						for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-							Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-							if (_property != null && _bs.get(_property) != null)
-								try {
-									_bs = _bs.with(_property, (Comparable) entry.getValue());
-								} catch (Exception e) {
-								}
+					if (((CmModVariables.WorldVariables.get(world).Worldgrid) > 1)) {
+						{
+							BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+							BlockState _bs = Hemp0Block.block.getDefaultState();
+							BlockState _bso = world.getBlockState(_bp);
+							for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+								Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+								if (_property != null && _bs.get(_property) != null)
+									try {
+										_bs = _bs.with(_property, (Comparable) entry.getValue());
+									} catch (Exception e) {
+									}
+							}
+							world.setBlockState(_bp, _bs, 3);
 						}
-						world.setBlockState(_bp, _bs, 3);
+					} else {
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+									BlockState _bs = Hemp0Block.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.get(_property) != null)
+											try {
+												_bs = _bs.with(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlockState(_bp, _bs, 3);
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 400);
 					}
 					new Object() {
 						private int ticks = 0;
@@ -109,19 +150,59 @@ public class Hemp0BlockAddedProcedure extends CmModElements.ModElement {
 						}
 
 						private void run() {
-							{
-								BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
-								BlockState _bs = Hemp1Block.block.getDefaultState();
-								BlockState _bso = world.getBlockState(_bp);
-								for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-									Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-									if (_property != null && _bs.get(_property) != null)
-										try {
-											_bs = _bs.with(_property, (Comparable) entry.getValue());
-										} catch (Exception e) {
-										}
+							if (((CmModVariables.WorldVariables.get(world).Worldgrid) > 1)) {
+								{
+									BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
+									BlockState _bs = Hemp1Block.block.getDefaultState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.get(_property) != null)
+											try {
+												_bs = _bs.with(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlockState(_bp, _bs, 3);
 								}
-								world.setBlockState(_bp, _bs, 3);
+							} else {
+								new Object() {
+									private int ticks = 0;
+									private float waitTicks;
+									private IWorld world;
+									public void start(IWorld world, int waitTicks) {
+										this.waitTicks = waitTicks;
+										MinecraftForge.EVENT_BUS.register(this);
+										this.world = world;
+									}
+
+									@SubscribeEvent
+									public void tick(TickEvent.ServerTickEvent event) {
+										if (event.phase == TickEvent.Phase.END) {
+											this.ticks += 1;
+											if (this.ticks >= this.waitTicks)
+												run();
+										}
+									}
+
+									private void run() {
+										{
+											BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
+											BlockState _bs = Hemp1Block.block.getDefaultState();
+											BlockState _bso = world.getBlockState(_bp);
+											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+												if (_property != null && _bs.get(_property) != null)
+													try {
+														_bs = _bs.with(_property, (Comparable) entry.getValue());
+													} catch (Exception e) {
+													}
+											}
+											world.setBlockState(_bp, _bs, 3);
+										}
+										MinecraftForge.EVENT_BUS.unregister(this);
+									}
+								}.start(world, (int) 400);
 							}
 							new Object() {
 								private int ticks = 0;
@@ -143,19 +224,59 @@ public class Hemp0BlockAddedProcedure extends CmModElements.ModElement {
 								}
 
 								private void run() {
-									{
-										BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
-										BlockState _bs = Hemp2Block.block.getDefaultState();
-										BlockState _bso = world.getBlockState(_bp);
-										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-											Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-											if (_property != null && _bs.get(_property) != null)
-												try {
-													_bs = _bs.with(_property, (Comparable) entry.getValue());
-												} catch (Exception e) {
-												}
+									if (((CmModVariables.WorldVariables.get(world).Worldgrid) > 1)) {
+										{
+											BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
+											BlockState _bs = Hemp2Block.block.getDefaultState();
+											BlockState _bso = world.getBlockState(_bp);
+											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+												Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+												if (_property != null && _bs.get(_property) != null)
+													try {
+														_bs = _bs.with(_property, (Comparable) entry.getValue());
+													} catch (Exception e) {
+													}
+											}
+											world.setBlockState(_bp, _bs, 3);
 										}
-										world.setBlockState(_bp, _bs, 3);
+									} else {
+										new Object() {
+											private int ticks = 0;
+											private float waitTicks;
+											private IWorld world;
+											public void start(IWorld world, int waitTicks) {
+												this.waitTicks = waitTicks;
+												MinecraftForge.EVENT_BUS.register(this);
+												this.world = world;
+											}
+
+											@SubscribeEvent
+											public void tick(TickEvent.ServerTickEvent event) {
+												if (event.phase == TickEvent.Phase.END) {
+													this.ticks += 1;
+													if (this.ticks >= this.waitTicks)
+														run();
+												}
+											}
+
+											private void run() {
+												{
+													BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
+													BlockState _bs = Hemp2Block.block.getDefaultState();
+													BlockState _bso = world.getBlockState(_bp);
+													for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+														Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+														if (_property != null && _bs.get(_property) != null)
+															try {
+																_bs = _bs.with(_property, (Comparable) entry.getValue());
+															} catch (Exception e) {
+															}
+													}
+													world.setBlockState(_bp, _bs, 3);
+												}
+												MinecraftForge.EVENT_BUS.unregister(this);
+											}
+										}.start(world, (int) 400);
 									}
 									new Object() {
 										private int ticks = 0;
@@ -177,19 +298,60 @@ public class Hemp0BlockAddedProcedure extends CmModElements.ModElement {
 										}
 
 										private void run() {
-											{
-												BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
-												BlockState _bs = Hemp3Block.block.getDefaultState();
-												BlockState _bso = world.getBlockState(_bp);
-												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-													Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
-													if (_property != null && _bs.get(_property) != null)
-														try {
-															_bs = _bs.with(_property, (Comparable) entry.getValue());
-														} catch (Exception e) {
-														}
+											if (((CmModVariables.WorldVariables.get(world).Worldgrid) > 1)) {
+												{
+													BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
+													BlockState _bs = Hemp3Block.block.getDefaultState();
+													BlockState _bso = world.getBlockState(_bp);
+													for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+														Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());
+														if (_property != null && _bs.get(_property) != null)
+															try {
+																_bs = _bs.with(_property, (Comparable) entry.getValue());
+															} catch (Exception e) {
+															}
+													}
+													world.setBlockState(_bp, _bs, 3);
 												}
-												world.setBlockState(_bp, _bs, 3);
+											} else {
+												new Object() {
+													private int ticks = 0;
+													private float waitTicks;
+													private IWorld world;
+													public void start(IWorld world, int waitTicks) {
+														this.waitTicks = waitTicks;
+														MinecraftForge.EVENT_BUS.register(this);
+														this.world = world;
+													}
+
+													@SubscribeEvent
+													public void tick(TickEvent.ServerTickEvent event) {
+														if (event.phase == TickEvent.Phase.END) {
+															this.ticks += 1;
+															if (this.ticks >= this.waitTicks)
+																run();
+														}
+													}
+
+													private void run() {
+														{
+															BlockPos _bp = new BlockPos((int) x, (int) (y + 0), (int) z);
+															BlockState _bs = Hemp3Block.block.getDefaultState();
+															BlockState _bso = world.getBlockState(_bp);
+															for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+																Property _property = _bs.getBlock().getStateContainer()
+																		.getProperty(entry.getKey().getName());
+																if (_property != null && _bs.get(_property) != null)
+																	try {
+																		_bs = _bs.with(_property, (Comparable) entry.getValue());
+																	} catch (Exception e) {
+																	}
+															}
+															world.setBlockState(_bp, _bs, 3);
+														}
+														MinecraftForge.EVENT_BUS.unregister(this);
+													}
+												}.start(world, (int) 400);
 											}
 											new Object() {
 												private int ticks = 0;
@@ -211,20 +373,61 @@ public class Hemp0BlockAddedProcedure extends CmModElements.ModElement {
 												}
 
 												private void run() {
-													{
-														BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
-														BlockState _bs = HempBabyBlock.block.getDefaultState();
-														BlockState _bso = world.getBlockState(_bp);
-														for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-															Property _property = _bs.getBlock().getStateContainer()
-																	.getProperty(entry.getKey().getName());
-															if (_property != null && _bs.get(_property) != null)
-																try {
-																	_bs = _bs.with(_property, (Comparable) entry.getValue());
-																} catch (Exception e) {
-																}
+													if (((CmModVariables.WorldVariables.get(world).Worldgrid) > 1)) {
+														{
+															BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+															BlockState _bs = HempBabyBlock.block.getDefaultState();
+															BlockState _bso = world.getBlockState(_bp);
+															for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+																Property _property = _bs.getBlock().getStateContainer()
+																		.getProperty(entry.getKey().getName());
+																if (_property != null && _bs.get(_property) != null)
+																	try {
+																		_bs = _bs.with(_property, (Comparable) entry.getValue());
+																	} catch (Exception e) {
+																	}
+															}
+															world.setBlockState(_bp, _bs, 3);
 														}
-														world.setBlockState(_bp, _bs, 3);
+													} else {
+														new Object() {
+															private int ticks = 0;
+															private float waitTicks;
+															private IWorld world;
+															public void start(IWorld world, int waitTicks) {
+																this.waitTicks = waitTicks;
+																MinecraftForge.EVENT_BUS.register(this);
+																this.world = world;
+															}
+
+															@SubscribeEvent
+															public void tick(TickEvent.ServerTickEvent event) {
+																if (event.phase == TickEvent.Phase.END) {
+																	this.ticks += 1;
+																	if (this.ticks >= this.waitTicks)
+																		run();
+																}
+															}
+
+															private void run() {
+																{
+																	BlockPos _bp = new BlockPos((int) x, (int) (y + 1), (int) z);
+																	BlockState _bs = HempBabyBlock.block.getDefaultState();
+																	BlockState _bso = world.getBlockState(_bp);
+																	for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+																		Property _property = _bs.getBlock().getStateContainer()
+																				.getProperty(entry.getKey().getName());
+																		if (_property != null && _bs.get(_property) != null)
+																			try {
+																				_bs = _bs.with(_property, (Comparable) entry.getValue());
+																			} catch (Exception e) {
+																			}
+																	}
+																	world.setBlockState(_bp, _bs, 3);
+																}
+																MinecraftForge.EVENT_BUS.unregister(this);
+															}
+														}.start(world, (int) 400);
 													}
 													MinecraftForge.EVENT_BUS.unregister(this);
 												}

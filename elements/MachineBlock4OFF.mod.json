@@ -2,16 +2,16 @@
   "_fv": 18,
   "_type": "block",
   "definition": {
-    "texture": "plant_texture_trans",
+    "texture": "log_oak",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "hemp3:default",
-    "rotationMode": 2,
-    "emissiveRendering": false,
+    "customModelName": "machineblockfour:default",
+    "rotationMode": 0,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -19,20 +19,20 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
         "mx": 0.0,
-        "my": 0.0,
+        "my": -4.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 0.0,
         "Mz": 16.0,
         "subtract": false
       }
     ],
-    "name": "Hemp",
+    "name": "Grow light",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -43,7 +43,7 @@
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": "CUSTOM:HempSeeds"
+      "value": "CUSTOM:MachineBlock4OFF"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -57,7 +57,7 @@
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "SILVER",
     "creativePickItem": {
       "value": ""
     },
@@ -69,12 +69,12 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "DESTROY",
-    "isNotColidable": true,
+    "reactionToPushing": "NORMAL",
+    "isNotColidable": false,
     "soundOnStep": {
-      "value": "PLANT"
+      "value": "GLASS"
     },
-    "luminance": 0,
+    "luminance": 1,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": false,
@@ -89,8 +89,8 @@
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -101,8 +101,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "Hemp3Drop"
+    "onTickUpdate": {
+      "name": "GROWLIGHTUpdateTick"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

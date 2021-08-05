@@ -11,7 +11,7 @@
     "renderType": 2,
     "customModelName": "machineblockfour:default",
     "rotationMode": 0,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Machine components",
+    "name": "Grow light",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -57,7 +57,7 @@
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "SILVER",
     "creativePickItem": {
       "value": ""
     },
@@ -72,9 +72,9 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "GLASS"
     },
-    "luminance": 0,
+    "luminance": 15,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": false,
@@ -101,6 +101,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "GROWLIGHTUpdateTick"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

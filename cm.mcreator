@@ -1591,16 +1591,6 @@
       }
     },
     {
-      "name": "Statsgui",
-      "type": "gui",
-      "sortid": 112,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "statsgui",
-      "path": "~/cmEnergySystem/Machineblocks"
-    },
-    {
       "name": "GridStatsCommandExecuted",
       "type": "procedure",
       "sortid": 113,
@@ -1814,6 +1804,75 @@
           }
         ]
       }
+    },
+    {
+      "name": "GROWLIGHTUpdateTick",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "growlight_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MachineBlock4OFF",
+      "type": "block",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "machine_block_4_off",
+      "path": "~/cmEnergySystem/Machineblocks"
+    },
+    {
+      "name": "TempleSpawnAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temple_spawn_additional_generation_condition",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1890,7 +1949,7 @@
       "block.cm.fire_table": "Fire Table",
       "block.cm.turn_animation_1": "Turn Animation 1",
       "item.cm.copper_armor_helmet": "Copper Helmet",
-      "block.cm.machineblock_4": "Machine components",
+      "block.cm.machineblock_4": "Grow light",
       "item.cm.copper_armor_leggings": "Copper Leggings",
       "block.cm.fanblock_cm": "Fanblock CM",
       "item.cm.strong_bronze_armor_boots": "Bronze Boots",
@@ -1931,6 +1990,7 @@
       "block.cm.hemp_1": "Hemp 3",
       "block.cm.hemp_0": "Hemp",
       "item.cm.strong_bronze_armor_chestplate": "Bronze Chestplate",
+      "block.cm.machine_block_4_off": "Grow light",
       "item.cm.strong_bronze_armor_helmet": "Bronze Helmet",
       "block.cm.hemp_baby": "Baby Hemp",
       "item.cm.tin_ore_ingot": "Tin Ingot",
