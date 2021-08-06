@@ -1903,16 +1903,6 @@
       "path": "~/NPC"
     },
     {
-      "name": "SPAWNTRADETest",
-      "type": "item",
-      "sortid": 129,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "spawntrade_test",
-      "path": "~/cmEnergySystem/Debug Commands"
-    },
-    {
       "name": "Spawnnnpc",
       "type": "procedure",
       "sortid": 130,
@@ -1928,6 +1918,37 @@
           }
         ]
       },
+      "path": "~/NPC"
+    },
+    {
+      "name": "BurnerphoneRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "burnerphone_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Burnerphone",
+      "type": "item",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "burnerphone",
       "path": "~/NPC"
     }
   ],
@@ -2057,7 +2078,6 @@
       "block.cm.aluminium_ore_block": "Block of Aluminium",
       "block.cm.copper_cable_90": "Coppercable",
       "item.cm.tin_armor_chestplate": "Tin Chestplate",
-      "item.cm.spawntrade_test": "SPAWNTRADE Test",
       "block.cm.solar_panel_one": "Solar Panel",
       "item.cm.tin_armor_helmet": "Tin Helmet",
       "block.cm.machine_press_lid": "Machine Press LID",
@@ -2073,6 +2093,7 @@
       "item.cm.hemp_seeds": "Hemp Seeds",
       "item.cm.iron_disk": "Golddisk",
       "item.cm.aluminium_armor_helmet": "Aluminium Helmet",
+      "item.cm.burnerphone": "Mobile Phone",
       "item.cm.copper_armor_boots": "Copper Boots"
     }
   },

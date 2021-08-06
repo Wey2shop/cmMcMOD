@@ -2,8 +2,6 @@
 package net.mcreator.cm.item;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.math.BlockPos;
@@ -16,7 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.cm.procedures.SummonNPCProcedure;
+import net.mcreator.cm.procedures.BurnerphoneRightClickedOnBlockProcedure;
 import net.mcreator.cm.itemgroup.CmMCMODItemGroup;
 import net.mcreator.cm.CmModElements;
 
@@ -24,11 +22,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @CmModElements.ModElement.Tag
-public class SPAWNTRADETestItem extends CmModElements.ModElement {
-	@ObjectHolder("cm:spawntrade_test")
+public class BurnerphoneItem extends CmModElements.ModElement {
+	@ObjectHolder("cm:burnerphone")
 	public static final Item block = null;
-	public SPAWNTRADETestItem(CmModElements instance) {
-		super(instance, 129);
+	public BurnerphoneItem(CmModElements instance) {
+		super(instance, 131);
 	}
 
 	@Override
@@ -38,7 +36,7 @@ public class SPAWNTRADETestItem extends CmModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(CmMCMODItemGroup.tab).maxStackSize(1).rarity(Rarity.COMMON));
-			setRegistryName("spawntrade_test");
+			setRegistryName("burnerphone");
 		}
 
 		@Override
@@ -48,18 +46,12 @@ public class SPAWNTRADETestItem extends CmModElements.ModElement {
 
 		@Override
 		public int getUseDuration(ItemStack itemstack) {
-			return 0;
+			return 2;
 		}
 
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
-		}
-
-		@Override
-		@OnlyIn(Dist.CLIENT)
-		public boolean hasEffect(ItemStack itemstack) {
-			return true;
 		}
 
 		@Override
@@ -76,7 +68,8 @@ public class SPAWNTRADETestItem extends CmModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				SummonNPCProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("world", world);
+				BurnerphoneRightClickedOnBlockProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}

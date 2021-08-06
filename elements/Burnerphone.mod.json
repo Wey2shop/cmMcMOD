@@ -3,16 +3,16 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "animatedcrush",
+    "texture": "phonetexture",
     "customModelName": "Normal",
-    "name": "SPAWNTRADE Test",
+    "name": "Mobile Phone",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:CmMCMOD"
     },
     "stackSize": 1,
     "enchantability": 0,
-    "useDuration": 0,
+    "useDuration": 2,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
@@ -25,12 +25,12 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
-    "hasGlow": true,
+    "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedOnBlock": {
-      "name": "SummonNPC"
+      "name": "BurnerphoneRightClickedOnBlock"
     }
   }
 }
